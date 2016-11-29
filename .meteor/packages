@@ -24,3 +24,5 @@ iron:router
 accounts-password@1.3.2
 twbs:bootstrap
 accounts-ui
+less
+mrt:jquery-ui
