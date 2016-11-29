@@ -1,4 +1,4 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './conversations.html';
+import './layout1.html';

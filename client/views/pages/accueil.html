@@ -1,6 +1,59 @@
-<meta charset="UTF-8">
 <template name="accueil">
-  <h1>This is the first page</h1>
-  <a href="/login" >login</a>
-  <a href="/register" >register</a>
+  <div id="accueilContent">
+  <div id="text intro">
+  <p>
+  bienvenue sur matchHammer, le site pour rencontrer des joueurs de ta région ! 
+  </p>
+  </div>
+  <div id="loginDiv">
+  <button  class="accueil-open-modal" id="login">se connecter</button>
+  </div>
+  <div id ="registerDiv">
+  <button  class="accueil-open-modal" id="register">s'enregistrer</button>
+  </div>
+  </div>
+  {{>loginModalTemplate}}
+  {{>registerModalTemplate}}
 </template>
+
+<template name="loginModalTemplate">
+<div class="modal fade" id="loginModal">
+<div class="modal-dialog modal-sm">
+  <form class="login-form">
+    <div>  
+      <input class="email-address-input" name="loginEmail" type="text">
+    </div>
+    <div>
+      <input class="password-input" name="loginPassword" type="password">
+    </div>
+    <div>
+      <button type="submit" id="loginButton" value="login">se connecter</button>
+    </div>
+  </form>
+  </div>
+  </div>
+</template>
+
+<template name="registerModalTemplate">
+  <div class="modal fade" id="registerModal">
+  <div class="modal-dialog modal-sm">
+  <form class="register-form">
+    <div>  
+      <input class="pseudo-input" name="registerPseudo" type="text" placeholder="entrez un pseudo">
+    </div>
+	<div>  
+      <input class="email-address-input" name="registerEmail" type="text" placeholder="entrez un e-mail valide">
+    </div>
+    <div>
+      <input class="password-input" type="password" name="registerPassword" placeholder="choisissez un mdp">
+    </div>
+	<div>
+      <input class="passwordConfirm-input" type="password" name="registerConfirmPassword" placeholder="confirmez le mdp">
+    </div>
+    <div>
+      <button type="submit" value="Register">s'enregistrer</button>
+    </div>
+  </form>
+  </div>
+  </div>
+  </template>

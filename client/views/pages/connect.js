@@ -1,4 +1,4 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './header.html';
+import './connect.html';
