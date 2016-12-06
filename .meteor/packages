@@ -26,3 +26,4 @@ twbs:bootstrap
 accounts-ui@1.1.9
 less@2.7.8
 mrt:jquery-ui
+rcy:nouislider
