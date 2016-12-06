@@ -1,13 +1,30 @@
 <template name="matchmaking">
-  <div id="matchmaking">
-  <div id="sliderDistance">
-  <div id="custom-handle" class="ui-slider-handle">
-  	<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-  </div>
 
-  <div id="sliderRangePoints">
-<b>€ 10</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+<div id="matchmakingMain">
+<p> je t'encule thérèse</p>
+ <div id="sliderDistance">
+  {{> moveDistance}}
+ </div>
+ <div id="pointsRanger">
+  {{> points2PlayWith}}
  </div>
 </div>
-</div>
+</template>
+
+<template name="moveDistance">
+  <div id="distanceSlider">
+  	<div id="custom-handle" class="ui-slider-handle">
+  	</div>
+  </div>
+</template>
+
+<template name="points2PlayWith">
+  <!-- <div id="pointsRangeSlider"> -->
+  	<div class="slider"></div>
+<span class="example-val range" name="body"></span>
+
+
+<!--   </div> -->
+
+  <!-- Slider's current value is...{{sliderVal}} --><!-- You could get rid of this and just do {{sliderVal}} and have that return nothing if you want no text-->
 </template>
