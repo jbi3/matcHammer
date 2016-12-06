@@ -1,8 +1,29 @@
 /* CSS declarations go here */
-body { background: url('/bg_body_large.png'); }
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('fonts/BebasNeueRegular.otf');
+}
+@font-face {
+  font-family: 'BebasNeueBold';
+  src: url('fonts/BebasNeueBold.otf');
+}
+@ont-face {
+  font-family: 'BaskervaldADFStd-Bold';
+  src: url('fonts/BaskervaldADFStd-Bold.otf');
+}
+
+body { background: url('img/bg_body_large.png'); color: #fff; }
+p { font-family: 'BaskervaldADFStd-Bold', serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 
 /* CONTAINER */
-.container-fluid {max-width: 75%; }
+@media screen and (min-width: 992px) {
+	.container-fluid {max-width: 75%; margin: auto; }
+	.loginContainer {max-width: 75%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; background: url('img/bg_container.png'); }
+}
+@media screen and (max-width: 991px) {
+	.loginContainer { max-width: 100%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; background: url('img/bg_container.png'); }
+}
 
 /* NAV */
 .navbar { min-height: 40px; background: rgba(0,0,0,0.7); border: none; border-radius: 0; }
@@ -20,3 +41,19 @@ body { background: url('/bg_body_large.png'); }
 	#menuModal ul { padding: 0; }
 	#menuModal ul li { color: #ffffff; list-style-type: none; text-align: center; font-size: 3em; line-height: 2; }
 	#menuModal ul li a { color: #ffffff; text-decoration: none; }
+
+	/* FORM modal */
+	.modal-sm input { width: 100%; }
+	label { margin:10px 0 5px; font-family: 'BebasNeueRegular'; font-size: 1.5em; color: #ffffff; text-transform: uppercase; text-align: left; }
+	input, textarea, select { margin: 0px 0px 15px; padding: 5px 10px; background: #e6e6e6; border-radius: 5px; border: 1px solid #303030; box-shadow: 1px 1px 3px rgba(0,0,0,0.7); font-family: 'BaskervaldADFStd-Bold', serif; color: #2e2e2e; }
+
+/* BTN */
+.btn { margin: 10px 15px; font-family: 'BaskervaldADFStd-Bold', serif; font-size: 1.5em; }
+.btn-primary { background: #9d1d20; border: 2px solid #a63e30; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active { background: #a63e30; border: 2px solid #9d1d20; transition: 0.15s all; }
+
+.btn-secondary { background: #434242; border: 2px solid #5a5a5a; color: #ffffff; }
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active { background: #5a5a5a; border: 2px solid #434242; color: #ffffff; transition: 0.15s all; }
+
+/* SIGN-IN + SIGN-UP */
+#loginModal .modal-sm, #registerModal .modal-sm { background: #450206; padding: 15px 20px; }

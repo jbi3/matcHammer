@@ -1,8 +1,12 @@
 <template name="accueil">
   <div id="accueilContent">
   <div id="text intro">
+  <h1>Trouve des joueurs de ta region !</h1>
   <p>
-  bienvenue sur matchHammer, le site pour rencontrer des joueurs de ta région ! 
+  Système de matchmaking pour le jeu Warhammer 40.000
+  </p>
+  <p>
+  Dans cette galaxie,il n’y a que des adversaires ! 
   </p>
   </div>
   <div id="loginDiv">
@@ -39,16 +43,24 @@
   <div class="modal-dialog modal-sm">
   <form class="register-form">
     <div>  
-      <input class="pseudo-input" name="registerPseudo" type="text" placeholder="entrez un pseudo">
-    </div>
-	<div>  
-      <input class="email-address-input" name="registerEmail" type="text" placeholder="entrez un e-mail valide">
-    </div>
-    <div>
-      <input class="password-input" type="password" name="registerPassword" placeholder="choisissez un mdp">
+      <label for="registerPseudo">Nom d'utilisateur:</label>
+      <input class="pseudo-input" name="registerPseudo" id="registerPseudo" type="text" placeholder="entrez un pseudo">
     </div>
 	<div>
-      <input class="passwordConfirm-input" type="password" name="registerConfirmPassword" placeholder="confirmez le mdp">
+      <label for="registerEmail">Adresse email:</label>  
+      <input class="email-address-input" name="registerEmail" id="registerEmail" type="text" placeholder="entrez un e-mail valide">
+    </div>
+    <div>
+      <label for="registerPassword">Mot de passe:</label>  
+      <input class="password-input" type="password" name="registerPassword" id="registerPassword" placeholder="choisissez un mdp">
+    </div>
+    <div>
+      <label for="registerConfirmPassword">Confirmer mot de passe:</label>  
+      <input class="passwordConfirm-input" type="password" name="registerConfirmPassword" id="registerConfirmPassword" placeholder="confirmez le mdp">
+    </div>
+    <div>
+      <label for="registerAdress">Adresse (ville):</label>  
+      <input class="adress-input" type="text" name="registerAdress" id="registerAdress" placeholder="confirmez le mdp">
     </div>
     <div>
       <button type="submit" class="btn btn-primary" value="Register">s'enregistrer</button>
