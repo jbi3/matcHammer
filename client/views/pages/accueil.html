@@ -1,13 +1,16 @@
 <template name="accueil">
+  <img src="img/Logo_MatcHammer.png" style="height: 100px;">
   <div id="accueilContent">
   <div id="text intro">
   <h1>Trouve des joueurs de ta region !</h1>
-  <p>
-  Système de matchmaking pour le jeu Warhammer 40.000
+  <p class="titleSeparator"></p>
+  <p class="texteIntro">
+  Système de matchmaking pour le jeu Warhammer 40.000&copy;
   </p>
-  <p>
-  Dans cette galaxie,il n’y a que des adversaires ! 
+  <p class="texteIntro">
+  Dans cette galaxie, il n’y a que des adversaires ! 
   </p>
+    <p class="titleSeparator"></p>
   </div>
   <div id="loginDiv">
   <button  class="btn btn-primary" id="login">se connecter</button>
@@ -24,11 +27,13 @@
 <div class="modal fade" id="loginModal">
 <div class="modal-dialog modal-sm">
   <form class="login-form">
-    <div>  
-      <input class="email-address-input" name="loginEmail" type="text">
+    <div>
+      <label for="loginEmail">Adresse email:</label>  
+      <input class="email-address-input" name="loginEmail" id="loginEmail"  type="text" placeholder="entrez votre e-mail">
     </div>
     <div>
-      <input class="password-input" name="loginPassword" type="password">
+      <label for="loginPassword">Mot de passe:</label> 
+      <input class="password-input" name="loginPassword" id="loginPassword"  type="password" placeholder="entrez votre mot de passe">
     </div>
     <div>
       <button type="submit" class="btn btn-primary" id="loginButton" value="login">se connecter</button>

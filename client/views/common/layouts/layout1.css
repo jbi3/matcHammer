@@ -15,6 +15,9 @@
 body { background: url('img/bg_body_large.png'); color: #fff; }
 p { font-family: 'BaskervaldADFStd-Bold', serif; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
+h1 { font-size: 4em; }
+.texteIntro { font-size: 1.2em; }
+.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 50%; margin: auto; margin-bottom: 15px; }
 
 /* CONTAINER */
 @media screen and (min-width: 992px) {
@@ -42,13 +45,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 	#menuModal ul li { color: #ffffff; list-style-type: none; text-align: center; font-size: 3em; line-height: 2; }
 	#menuModal ul li a { color: #ffffff; text-decoration: none; }
 
-	/* FORM modal */
-	.modal-sm input { width: 100%; }
-	label { margin:10px 0 5px; font-family: 'BebasNeueRegular'; font-size: 1.5em; color: #ffffff; text-transform: uppercase; text-align: left; }
-	input, textarea, select { margin: 0px 0px 15px; padding: 5px 10px; background: #e6e6e6; border-radius: 5px; border: 1px solid #303030; box-shadow: 1px 1px 3px rgba(0,0,0,0.7); font-family: 'BaskervaldADFStd-Bold', serif; color: #2e2e2e; }
-
 /* BTN */
-.btn { margin: 10px 15px; font-family: 'BaskervaldADFStd-Bold', serif; font-size: 1.5em; }
+.btn { margin: 5px 15px; font-family: 'BaskervaldADFStd-Bold', serif; font-size: 1.5em; }
 .btn-primary { background: #9d1d20; border: 2px solid #a63e30; }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active { background: #a63e30; border: 2px solid #9d1d20; transition: 0.15s all; }
 
@@ -57,3 +55,12 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 
 /* SIGN-IN + SIGN-UP */
 #loginModal .modal-sm, #registerModal .modal-sm { background: #450206; padding: 15px 20px; }
+
+	/* Modals */
+	#loginModal { background: rgba(0,0,0,0.7); }
+	#registerModal { background: rgba(0,0,0,0.7); }
+
+	/* FORM modal */
+	.modal-sm input { width: 100%; }
+	label { margin:10px 0 5px; font-family: 'BebasNeueRegular'; font-size: 1.5em; color: #ffffff; text-transform: uppercase; text-align: left; }
+	input, textarea, select { margin: 0px 0px 15px; padding: 5px 10px; background: #e6e6e6; border-radius: 5px; border: 1px solid #303030; box-shadow: 1px 1px 3px rgba(0,0,0,0.7); font-family: 'BaskervaldADFStd-Bold', serif; color: #2e2e2e; }
