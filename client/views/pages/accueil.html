@@ -1,23 +1,26 @@
 <template name="accueil">
   <img src="img/Logo_MatcHammer.png" alt="Match Hammer" id="logoAccueil" style="height: 100px;">
   <div id="accueilContent">
-  <div id="text intro">
-  <h1>Trouve des joueurs<br> de ta region !</h1>
-  <p class="titleSeparator"></p>
-  <p class="texteIntro">
-  Système de matchmaking pour le jeu Warhammer 40.000&copy;
-  </p>
-  <p class="texteIntro">
-  Dans cette galaxie, il n’y a que des adversaires ! 
-  </p>
-    <p class="titleSeparator"></p>
-  </div>
-  <div id="loginDiv">
-  <button  class="btn btn-primary" id="login">se connecter</button>
-  </div>
-  <div id ="registerDiv">
-  <button  class="btn btn-secondary" id="register">s'enregistrer</button>
-  </div>
+    <div class="contentBG">
+      <div id="text intro">
+      <h1>Trouve des joueurs<br> de ta region !</h1>
+      <p class="titleSeparator"></p>
+      <p class="texteIntro">
+      Système de matchmaking<br> pour le jeu Warhammer 40.000&copy;
+      </p>
+      <p class="texteIntro">
+      Dans cette galaxie,<br> il n’y a que des adversaires ! 
+      </p>
+        <p class="titleSeparator"></p>
+      </div>
+      <div id ="registerDiv">
+      <button  class="btn btn-primary" id="register">S'enregistrer</button>
+      </div>
+      <div id="loginDiv">
+      <button  class="btn btn-secondary" id="login">Se connecter</button>
+      </div>
+
+    </div>
   </div>
   {{>loginModalTemplate}}
   {{>registerModalTemplate}}
