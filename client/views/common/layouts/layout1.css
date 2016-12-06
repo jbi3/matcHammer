@@ -15,14 +15,15 @@
 body { background: url('img/bg_body_large.png'); color: #fff; }
 p { font-family: 'BaskervaldADFStd-Bold', serif; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
-h1 { font-size: 4em; }
+h1 { font-size: 4.3em; line-height: 0.9; }
 .texteIntro { font-size: 1.2em; }
 .titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 50%; margin: auto; margin-bottom: 15px; }
 
 /* CONTAINER */
+#accueilContent { margin-top: 6%; padding: 2% 0; background: url('img/bg_container.png'); box-shadow: 1px 15px 15px rgba(0,0,0,0.5); }
 @media screen and (min-width: 992px) {
 	.container-fluid {max-width: 75%; margin: auto; }
-	.loginContainer {max-width: 75%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; background: url('img/bg_container.png'); }
+	.loginContainer {max-width: 75%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; }
 }
 @media screen and (max-width: 991px) {
 	.loginContainer { max-width: 100%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; background: url('img/bg_container.png'); }
