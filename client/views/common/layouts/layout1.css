@@ -16,7 +16,7 @@
   src: url('fonts/BaskervaldADFStd-Bold.otf');
 }
 
-body { background: url('img/bg_body_large2.png') center center; color: #fff; }
+body { background: url('img/bg_body_large4.png') center center; color: #fff; }
 p { font-family: 'BaskervaldADFStd', serif; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 h1 { margin-bottom: 30px; margin:0; margin-bottom: 30px; font-size: 4.3em; line-height: 0.9; }
@@ -30,10 +30,10 @@ h1 { margin-bottom: 30px; margin:0; margin-bottom: 30px; font-size: 4.3em; line-
 .contentBG { margin: 0; padding: 3% 0; background: url('img/bg_container.png'); }
 @media screen and (min-width: 992px) {
 	.container-fluid {max-width: 75%; margin: auto; }
-	.loginContainer {max-width: 50%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; }
+	.loginContainer {max-width: 50%; margin: 0 auto; padding: 30px 15px; text-align: center; }
 }
 @media screen and (max-width: 991px) {
-	.loginContainer { max-width: 100%; margin: auto; margin-top: 50px; padding: 30px 15px; text-align: center; }
+	.loginContainer { max-width: 100%; margin: 0 auto; padding: 30px 15px; text-align: center; }
 }
 
 /* NAV */
