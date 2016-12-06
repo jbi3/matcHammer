@@ -1,19 +1,13 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Matchmaking</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#slider" ).slider();
-  } );
-  </script>
-</head>
-
 <template name="matchmaking">
-  <h1>matchmaking</h1>
-  <div id="slider"></div>
+  <div id="matchmaking">
+  <div id="sliderDistance">
+  <div id="custom-handle" class="ui-slider-handle">
+  	<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+  </div>
+
+  <div id="sliderRangePoints">
+<b>€ 10</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+ </div>
+</div>
+</div>
 </template>
