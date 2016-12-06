@@ -38,7 +38,7 @@ Template.menuModal.events({
       console.log(this);
        /*Meteor.Router.to('/rooms/' + this.id);*/
        $('#menuModal').modal('hide');
-       Router.to('/matchmaking');
+       Router.go('/matchmaking');
 
      }
 });
