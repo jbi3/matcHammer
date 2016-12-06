@@ -1,1 +1,20 @@
 /* CSS declarations go here */
+body { background: url('http://jeanbaptistebarbera.com/projets/bg_body_large.png'); }
+
+/* CONTAINER */
+.container-fluid {max-width: 75%; }
+
+/* NAV */
+.navbar { min-height: 40px; background: rgba(0,0,0,0.7); border: none; border-radius: 0; }
+.navbar-brand { height: 40px; padding: 10px 15px; }
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active { background: #790000; }
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background: #790000; }
+
+	/* ICONS */
+	.glyphicon { color: #ffffff; }
+	.caret { color: #ffffff; }
+
+	/* MENU modal */
+	#menuModal { background: rgba(0,0,0,0.3); }
+	#menuModal ul li { color: #ffffff; list-style-type: none; text-align: center; font-size: 3em; line-height: 2; }
+	#menuModal ul li a { color: #ffffff; text-decoration: none; }
