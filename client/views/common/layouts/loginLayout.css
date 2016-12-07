@@ -1,1 +1,13 @@
 /* CSS declarations go here */
+@media screen and (min-width: 768px) {
+	#logoAccueil { max-height: 70px; }
+	h1 { margin:0; margin-bottom: 30px; padding: 0 30px; font-size: 4.3em; line-height: 0.9; }
+	.texteIntro { margin-bottom: 30px; padding: 0 15px; font-size: 1.3em; }
+	.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 50%; margin: auto; margin-bottom: 30px; }
+}
+@media screen and (max-width: 767px) {
+	#logoAccueil { max-height: 45px; }
+	h1 { margin:0; margin-bottom: 15px; padding: 0 30px; font-size: 3.3em; line-height: 0.9; }
+	.texteIntro { margin-bottom: 15px; padding: 0 15px; font-size: 1.3em; }
+	.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 75%; margin: auto; margin-bottom: 15px; }
+}

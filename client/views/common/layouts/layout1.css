@@ -19,20 +19,17 @@
 body { background: url('img/bg_body_large4.png') center center; color: #fff; }
 p { font-family: 'BaskervaldADFStd', serif; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
-h1 { margin-bottom: 30px; margin:0; margin-bottom: 30px; font-size: 4.3em; line-height: 0.9; }
-.texteIntro { margin-bottom: 30px; font-size: 1.3em; }
-.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 50%; margin: auto; margin-bottom: 30px; }
 
 /* CONTAINER */
 #accueilContent { overflow: hidden; margin: 0; margin-top: 6%; padding: 0; }
 #accueilContent:before { content: url('img/bg_container_before.png'); position: relative; top: 5px; }
 #accueilContent:after { content: url('img/bg_container_after.png'); }
 .contentBG { margin: 0; padding: 3% 0; background: url('img/bg_container.png'); }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
 	.container-fluid {max-width: 75%; margin: auto; }
 	.loginContainer {max-width: 50%; margin: 0 auto; padding: 30px 15px; text-align: center; }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
 	.loginContainer { max-width: 100%; margin: 0 auto; padding: 30px 15px; text-align: center; }
 }
 
@@ -54,7 +51,7 @@ h1 { margin-bottom: 30px; margin:0; margin-bottom: 30px; font-size: 4.3em; line-
 	#menuModal ul li a { color: #ffffff; text-decoration: none; }
 
 /* BTN */
-.btn { margin: 5px 15px; font-family: 'BaskervaldADFStd-Bold', serif; font-size: 1.5em; }
+.btn { margin: 5px 15px; font-family: 'BaskervaldADFStd-Bold', serif; font-size: 1.5em; text-align: center; }
 .btn-primary { background: #9d1d20; border: 2px solid #a63e30; }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active { background: #a63e30; border: 2px solid #9d1d20; transition: 0.15s all; }
 
@@ -62,13 +59,13 @@ h1 { margin-bottom: 30px; margin:0; margin-bottom: 30px; font-size: 4.3em; line-
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active { background: #5a5a5a; border: 2px solid #434242; color: #ffffff; transition: 0.15s all; }
 
 /* SIGN-IN + SIGN-UP */
-#logoAccueil { height: 100px; }
+#logoAccueil { max-height: 50px; min-height: 20px; }
 #loginDiv, #registerDiv { display: inline-block; }
 #loginModal .modal-sm, #registerModal .modal-sm { background: #450206; padding: 15px 20px; }
 
 	/* Modals */
-	#loginModal { background: rgba(0,0,0,0.7); }
-	#registerModal { background: rgba(0,0,0,0.7); }
+	#loginModal { background: rgba(0,0,0,0.7); text-align: left; }
+	#registerModal { background: rgba(0,0,0,0.7); text-align: left; }
 
 	/* FORM modal */
 	.modal-sm input { width: 100%; }
