@@ -1,13 +1,80 @@
-/* CSS declarations go here */
+/* CSS declarations loginLayout.css */
+
+/* CONTAINER */
+#accueilContent { overflow: hidden;
+	margin: 0;
+	margin-top: 6%;
+	padding: 0; }
+#accueilContent:before { content: url('img/bg_container_before.png');
+	position: relative;
+	top: 5px; }
+#accueilContent:after { content: url('img/bg_container_after.png'); }
+.contentBG { margin: 0;
+	padding: 3% 0;
+	background: url('img/bg_container.png'); }
+	
+/* SIGN-IN + SIGN-UP */
+#loginDiv, #registerDiv { display: inline-block; }
+	/* Modals */
+	#loginModal .modal-sm, #registerModal .modal-sm {
+		background: #450206;
+		padding: 15px 20px; }
+	#loginModal, #registerModal { background: rgba(0,0,0,0.7);
+		text-align: left; }
+		/* FORM modal */
+		.modal-sm input { width: 100%; }
+		label { margin:10px 0 5px;
+			font-family: 'BebasNeueRegular';
+			font-size: 1.5em;
+			color: #ffffff;
+			text-transform: uppercase;
+			text-align: left; }
+		input, textarea, select { margin: 0px 0px 15px;
+			padding: 5px 10px;
+			background: #e6e6e6;
+			border-radius: 5px;
+			border: 1px solid #303030;
+			box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+			font-family: 'BaskervaldADFStd-Bold', serif;
+			color: #2e2e2e; }
+
+/* SCREEN =>768w */
 @media screen and (min-width: 768px) {
+	.loginContainer {max-width: 50%;
+		margin: 0 auto;
+		padding: 30px 15px;
+		text-align: center; }
 	#logoAccueil { max-height: 70px; }
-	h1 { margin:0; margin-bottom: 30px; padding: 0 30px; font-size: 4.3em; line-height: 0.9; }
-	.texteIntro { margin-bottom: 30px; padding: 0 15px; font-size: 1.3em; }
-	.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 50%; margin: auto; margin-bottom: 30px; }
-}
+	h1 { margin:0;
+		margin-bottom: 30px;
+		padding: 0 30px;
+		font-size: 4.3em;
+		line-height: 0.9; }
+	.texteIntro { margin-bottom: 30px;
+		padding: 0 15px;
+		font-size: 1.3em; }
+	.titleSeparator { background: url('img/separator.png');
+	height: 2px;
+	max-width: 50%;
+	margin: auto;
+	margin-bottom: 30px; }}
+
+/* SCREEN =<767w */
 @media screen and (max-width: 767px) {
+	.loginContainer { max-width: 100%;
+		margin: 0 auto;
+		padding: 30px 15px;
+		text-align: center; }
 	#logoAccueil { max-height: 45px; }
-	h1 { margin:0; margin-bottom: 15px; padding: 0 30px; font-size: 3.3em; line-height: 0.9; }
-	.texteIntro { margin-bottom: 15px; padding: 0 15px; font-size: 1.3em; }
-	.titleSeparator { background: url('img/separator.png'); height: 2px; max-width: 75%; margin: auto; margin-bottom: 15px; }
-}
+	h1 { margin:0; margin-bottom: 15px;
+		padding: 0 30px;
+		font-size: 3.3em;
+		line-height: 0.9; }
+	.texteIntro { margin-bottom: 15px;
+		padding: 0 15px;
+		font-size: 1.3em; }
+	.titleSeparator { background: url('img/separator.png');
+	height: 2px;
+	max-width: 75%;
+	margin: auto;
+	margin-bottom: 15px; }}
