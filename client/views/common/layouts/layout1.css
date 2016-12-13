@@ -21,7 +21,7 @@
 }
 
 /* GENERAL */
-body { background: url('img/bg_body_large4.png') center center;
+body { background: url('img/bg_body_large_glitch.png') center top;
 	color: #fff; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 p { font-family: 'BaskervaldADFStd', serif; }
