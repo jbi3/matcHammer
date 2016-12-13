@@ -25,9 +25,9 @@ html, body { margin: 0;
 	padding: 0;
 	height: 100%; }
 body { background: url('img/bg_body_large_glitch.png') center top;
-	color: #fff; }
+	color: #fff;
+	font-family: 'BaskervaldADFStd', serif; }
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
-p { font-family: 'BaskervaldADFStd', serif; }
 
 @media screen and (min-width: 768px) {
 	.container-fluid {max-width: 75%;

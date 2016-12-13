@@ -21,7 +21,7 @@ video { margin: 0;
 	padding: 0; }
 #accueilContent:before { content: url('img/bg_container_before.png');
 	position: relative;
-	top: 5px; }
+	top: 7px; }
 #accueilContent:after { content: url('img/bg_container_after.png'); }
 .contentBG { margin: 0;
 	padding: 3% 0;
@@ -35,6 +35,9 @@ video { margin: 0;
 		padding: 15px 20px; }
 	#loginModal, #registerModal { background: rgba(0,0,0,0.7);
 		text-align: left; }
+	.close { color: #ffffff;
+		opacity: 1;}
+	.close:hover { color: #ffffff; }
 		/* FORM modal */
 		.modal-sm input { width: 100%; }
 		label { margin:10px 0 5px;
