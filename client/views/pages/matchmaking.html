@@ -1,30 +1,34 @@
 <template name="matchmaking">
 
 <div id="matchmakingMain">
-<p> je t'encule thérèse</p>
  <div id="sliderDistance">
-  {{> moveDistance}}
+ <p> rayon de déplacement</p>
+	{{> moveDistance}} 
  </div>
  <div id="pointsRanger">
-  {{> points2PlayWith}}
+ <p>points compris entre</p> 
+  <!-- {{> points2PlayWith}} -->
  </div>
+</div>
+
+</template>
+<template name="moveDistance">
+  <!-- <div id="distanceSlider">
+  	<span class="example-val" name="body" id="range{{this._id}}"></span>
+  </div> -->
+  <div id="colorpicker">
+	<div class="sliders" id="red"></div>
+	<div class="sliders" id="green"></div>
+	<div class="sliders" id="blue"></div>
+
+	<div class="result"></div>
 </div>
 </template>
 
-<template name="moveDistance">
-  <div id="distanceSlider">
-  	<div id="custom-handle" class="ui-slider-handle">
-  	</div>
+
+<!-- <template name="points2PlayWith">
+  <div id="pointsSlider">
+  	<span class="example-val" name="body" id="range{{this._id}}"></span>
   </div>
 </template>
-
-<template name="points2PlayWith">
-  <!-- <div id="pointsRangeSlider"> -->
-  	<div class="slider"></div>
-<span class="example-val range" name="body"></span>
-
-
-<!--   </div> -->
-
-  <!-- Slider's current value is...{{sliderVal}} --><!-- You could get rid of this and just do {{sliderVal}} and have that return nothing if you want no text-->
-</template>
+ -->
