@@ -7,30 +7,34 @@
 </video>
   
   <div class="content">
-    <img src="img/Logo_MatcHammer.png" alt="Match Hammer" id="logoAccueil">
+    <img src="img/Logo_MatcHammer_v2.png" alt="Match Hammer" id="logoAccueil">
     <div id="accueilContent">
-        <div class="contentBG">
-        <div id="text intro">
-        <h1>Trouve des joueurs de ta region !</h1>
-        <p class="titleSeparator"></p>
+      <div class="contentBG">
+        <h1>Trouve des joueurs<br> de ta region !</h1>
+        <!-- <p class="titleSeparator"></p> -->
         <p class="texteIntro">
         Système de matchmaking pour le jeu Warhammer 40.000&copy;.<br>
         Trouve de nouveaux adversaires proches de chez toi.
         </p>
-        <p class="texteIntro">
-        Dans cette galaxie, il n’y a que la guerre ! 
-        </p>
-        </div>
+        <!-- <p class="titleSeparator"></p> -->
         <div id ="registerDiv">
-        {{#animate type="bounce" delay="200"}}
-        <button  class="btn btn-primary" id="register">S'enregistrer</button>
-        {{/animate}}
+          {{#animate type="bounce" delay="200"}}
+          <button class="btn btn-primary" id="register">S'enregistrer</button>
+          {{/animate}}
         </div>
         <div id="loginDiv">
-        <button  class="btn btn-secondary" id="login">Se connecter</button>
+          <button class="btn btn-secondary" id="login">Se connecter</button>
         </div>
-        </div>
+        <h3>
+        Dans cette galaxie, il n’y a que la guerre ! 
+        </h3>
+        <p class="legalInfos">
+          <strong>Avertissement: Ce site n'est pas officiel et en aucun cas autorisé ou approuvé par Games Workshop.</strong>
+          Warhammer 40.000, Games Workshop, le logo Warhammer 40,000, Adepta Sororita, Adeptus Astartes, Blood Angels, Chevaliers Gris, Dark Angels, Space Marines, Space Wolves, Adeptus Mechanicus, Cult Mechanicus, Skitarii, Astra Militarum, Dark Eldar, Dark Mechanicus, Démons du Chaos, Eldar, Empire Tau, Harlequins, Daemonkin, Militarum Tempestus, Necrons, Orks, Space Marines du Chaos sont des marques de Games Workshop Limited, utilisées sans autorisation et sans volonté de préjudice ou comme opposition à leur copyright.
+          Toutes les images et illustrations de l'univers Warhammer 40,000 sont des ®, TM et/ou © Games Workshop Ltd 2000-2017, enregistrées au Royaume-Uni et dans d'autres pays. Elles sont utilisées sans autorisation et sans volonté de préjudice ou comme opposition à leur copyright.
+        </p>
       </div>
+    </div>
   </div>
   {{>loginModalTemplate}}
   {{>registerModalTemplate}}

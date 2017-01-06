@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 		text-decoration: none; }
 
 /* BTN */
-.btn { margin: 5px 15px;
+.btn { margin: 5px;
 	font-family: 'BaskervaldADFStd-Bold', serif;
 	font-size: 1.5em;
 	text-align: center; }
