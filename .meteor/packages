@@ -27,4 +27,6 @@ accounts-ui@1.1.9
 less@2.7.8
 mrt:jquery-ui
 muqube:autoform-nouislider
+aldeed:autoform
 webtempest:animate
+

@@ -60,10 +60,13 @@ Template.registerModalTemplate.events({
         	username:usernameVar,
             email: emailVar,
             password: passwordVar
+            
         });
     }
     else{
     	console.log("error");
+      $('#registerModal').modal('show');
+      Router.go('/accueil');
     }
 	}
 });
