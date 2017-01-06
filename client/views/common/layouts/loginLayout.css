@@ -26,8 +26,11 @@ video { margin: 0;
 .contentBG { margin: 0;
 	padding: 3% 0;
 	background: url('img/bg_container_alt.png'); }
-	.contentBG h1 { color: #9d1d20; }
-	.contentBG p { color: #222222; }
+	.contentBG h1 { color: #9d1d20;
+		border-bottom: 1px dotted #444444;
+		margin: 0 15px 30px;
+		padding-bottom: 30px; }
+	.contentBG p { color: #111111; }
 	
 /* SIGN-IN + SIGN-UP */
 #loginDiv, #registerDiv { display: inline-block; }
@@ -60,13 +63,13 @@ video { margin: 0;
 /* LEGAL INFORMATIONS */
 .legalInfos { font-size: 0.8em;
 	text-align: left;
-	color: #555 !important;
+	color: #444444 !important;
 	margin: 0 15px;
 	padding: 0;
 	padding-top: 7px;
 	font-style: italic;
-	border-top: 1px solid #555;
-}
+	border-top: 1px dotted #444444; }
+	.legalInfos strong { font-weight: bold; font-style: normal !important; }
 /* SCREEN =>768w */
 @media screen and (min-width: 768px) {
 	.loginContainer {max-width: 50%;
