@@ -9,7 +9,7 @@
   <div class="content">
     <img src="img/Logo_MatcHammer.png" alt="Match Hammer" id="logoAccueil">
     <div id="accueilContent">
-      <div class="contentBG">
+        <div class="contentBG">
         <div id="text intro">
         <h1>Trouve des joueurs de ta region !</h1>
         <p class="titleSeparator"></p>
@@ -23,7 +23,9 @@
           <p class="titleSeparator"></p>
         </div>
         <div id ="registerDiv">
+        {{#animate type="bounce" delay="200"}}
         <button  class="btn btn-primary" id="register">S'enregistrer</button>
+        {{/animate}}
         </div>
         <div id="loginDiv">
         <button  class="btn btn-secondary" id="login">Se connecter</button>
@@ -52,11 +54,11 @@
       <input class="password-input" name="loginPassword" id="loginPassword"  type="password" placeholder="entrez votre mot de passe">
     </div>
     <div>
-      <button type="submit" class="btn btn-primary" id="loginButton" value="login">se connecter</button>
+      <button type="submit" class="btn btn-primary" id="loginButton" value="login">Se connecter</button>
     </div>
   </form>
   </div>
-  </div>
+  </div>  
 </template>
 
 <template name="registerModalTemplate">
@@ -88,7 +90,7 @@
       <input class="adress-input" type="text" name="registerAdress" id="registerAdress" placeholder="confirmez le mdp">
     </div>
     <div>
-      <button type="submit" class="btn btn-primary" value="Register">s'enregistrer</button>
+      <button type="submit" class="btn btn-primary" value="Register">S'enregistrer</button>
     </div>
   </form>
   </div>

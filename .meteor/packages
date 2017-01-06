@@ -27,4 +27,8 @@ accounts-ui@1.1.9
 less@2.7.8
 mrt:jquery-ui
 muqube:autoform-nouislider
+<<<<<<< HEAD
 aldeed:autoform
+=======
+webtempest:animate
+>>>>>>> origin/master
