@@ -1,34 +1,15 @@
 <template name="matchmaking">
-
-<div id="matchmakingMain">
- <div id="sliderDistance">
- <p> rayon de déplacement</p>
-	{{> moveDistance}} 
- </div>
- <div id="pointsRanger">
- <p>points compris entre</p> 
-  <!-- {{> points2PlayWith}} -->
- </div>
+<div id="matchmaking header">
+<p>Bienvenue sur le matchmaking </p>
 </div>
+<!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
+	<fieldset>
+	<legend>Paramètres de Matchmaking</legend>
+	  {{> afFieldInput type="noUiSlider" name="points" min=5 max=50 step=5}}
+	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
 
+	  {{> afQuickField name='range' start="[50,60]"}}
+	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
+	  </fieldset>
+{{/autoForm}} -->
 </template>
-<template name="moveDistance">
-  <!-- <div id="distanceSlider">
-  	<span class="example-val" name="body" id="range{{this._id}}"></span>
-  </div> -->
-  <div id="colorpicker">
-	<div class="sliders" id="red"></div>
-	<div class="sliders" id="green"></div>
-	<div class="sliders" id="blue"></div>
-
-	<div class="result"></div>
-</div>
-</template>
-
-
-<!-- <template name="points2PlayWith">
-  <div id="pointsSlider">
-  	<span class="example-val" name="body" id="range{{this._id}}"></span>
-  </div>
-</template>
- -->
