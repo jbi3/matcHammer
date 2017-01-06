@@ -19,13 +19,15 @@ video { margin: 0;
 	margin: 0;
 	margin-top: 6%;
 	padding: 0; }
-#accueilContent:before { content: url('img/bg_container_before.png');
+#accueilContent:before { content: url('img/bg_container_bords_alt_haut.png');
 	position: relative;
 	top: 7px; }
-#accueilContent:after { content: url('img/bg_container_after.png'); }
+#accueilContent:after { content: url('img/bg_container_bords_alt_bas.png'); }
 .contentBG { margin: 0;
 	padding: 3% 0;
-	background: url('img/bg_container.png'); }
+	background: #ffffff; }
+	.contentBG h1 { color: #9d1d20; }
+	.contentBG p { color: #333333; }
 	
 /* SIGN-IN + SIGN-UP */
 #loginDiv, #registerDiv { display: inline-block; }
