@@ -89,12 +89,7 @@ video { margin: 0;
 		padding: 0 15px; }
 	.texteIntro { margin-bottom: 30px;
 		padding: 0 15px;
-		font-size: 1.3em; }
-	.titleSeparator { background: url('img/separator.png');
-	height: 2px;
-	max-width: 50%;
-	margin: auto;
-	margin-bottom: 30px; }}
+		font-size: 1.3em; }}
 
 /* SCREEN =<767w */
 @media screen and (max-width: 767px) {
@@ -114,9 +109,4 @@ video { margin: 0;
 		padding: 0 15px; }
 	.texteIntro { margin-bottom: 15px;
 		padding: 0 15px;
-		font-size: 1.3em; }
-	.titleSeparator { background: url('img/separator.png');
-	height: 2px;
-	max-width: 75%;
-	margin: auto;
-	margin-bottom: 15px; }}
+		font-size: 1.3em; }}
