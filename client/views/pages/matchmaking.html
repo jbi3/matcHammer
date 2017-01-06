@@ -1,7 +1,27 @@
 <template name="matchmaking">
 <div id="matchmaking header">
-<p>Bienvenue sur le matchmaking </p>
+<p>Bienvenue dans le matchmaking </p>
 </div>
+
+<!-- {{> quickForm collection="Matchmakings" id="matchmaking" type="insert"}} -->
+
+{{#autoForm collection="Matchmakings" id="matchmaking" type="insert"}}
+<fieldset>
+    <legend>Options</legend>
+    {{> afQuickField name='moverange'}}
+    {{> afQuickField name='pointsMini'}}
+    {{> afQuickField name='pointsMaxi'}}
+    {{> afQuickField name='army'}}
+    {{> afQuickField name='lastCheckedOut'}}
+    <div class="form-group{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
+      <div class="input-group">
+        {{> afFieldInput name='slide'}}
+</div>
+</div>
+  </fieldset>
+  <button type="submit" class="btn btn-primary">MATCH</button>
+  {{/autoForm}}
+
 <!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
 	<fieldset>
 	<legend>Paramètres de Matchmaking</legend>
