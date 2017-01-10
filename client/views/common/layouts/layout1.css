@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 	top: 7px; }
 .container:after { content: url('img/bg_container_bords_alt_bas.png'); }
 
+/* FOOTER */
+.footerInfos { margin: 30px 0 0;
+	text-align: center; }
+
 /* FORM */
 fieldset { padding: 0 30px;
 	text-align: center; }
@@ -80,6 +84,7 @@ fieldset { padding: 0 30px;
 	font-family: 'BaskervaldADFStd-Bold', serif;
 	font-size: 1.5em;
 	text-align: center; }
+
 .btn-primary { background: #9d1d20;
 	border: 2px solid #a63e30; }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -99,7 +104,8 @@ fieldset { padding: 0 30px;
 .matchmakingBtn { background: #9d1d20;
 	border: 2px solid #a63e30;
 	font-size: 3em;
-	padding: 10px 30px; }
+	padding: 10px 30px;
+	margin: 5px 5px 30px; }
 .matchmakingBtn:hover, .matchmakingBtn:focus, .matchmakingBtn:active {
 	color: #ffffff;
 	background: #a63e30;
