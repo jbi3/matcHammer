@@ -38,7 +38,7 @@ video { margin: 0;
 	#loginModal .modal-sm, #registerModal .modal-sm {
 		background: none;
 		padding: 15px 20px; }
-	#loginModal, #registerModal { background: rgba(0,0,0,0.9);
+	#loginModal, #registerModal { background: rgba(0,0,0,1);
 		text-align: left; }
 	.close { color: #ffffff;
 		opacity: 1;}
@@ -50,26 +50,30 @@ video { margin: 0;
 			font-size: 1.5em;
 			color: #ffffff;
 			text-transform: uppercase;
-			text-align: left; }
+			text-align: left;
+			letter-spacing: 1px; }
 		input, textarea, select { margin: 0px 0px 15px;
 			padding: 5px 10px;
 			background: #e6e6e6;
 			border-radius: 5px;
 			border: 1px solid #303030;
 			box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-			font-family: 'BaskervaldADFStd-Bold', serif;
+			font-family: 'BaskervaldADFStd', serif;
 			color: #2e2e2e; }
 
 /* LEGAL INFORMATIONS */
 .legalInfos { font-size: 0.8em;
 	text-align: left;
 	color: #444444 !important;
-	margin: 0 15px;
+	margin: 0 15px 7px;
 	padding: 0;
 	padding-top: 7px;
 	font-style: italic;
 	border-top: 1px dotted #444444; }
-	.legalInfos strong { font-weight: bold; font-style: normal !important; }
+	.legalInfos strong { font-weight: bold;
+		font-style: normal !important; }
+	.legalInfos a { font-style: normal !important; }
+
 /* SCREEN =>768w */
 @media screen and (min-width: 768px) {
 	.loginContainer {max-width: 50%;
@@ -87,7 +91,7 @@ video { margin: 0;
 		letter-spacing: 0.5px;
 		margin: 15px 0 30px;
 		padding: 0 15px; }
-	.texteIntro { margin-bottom: 30px;
+	.texteIntro { margin-bottom: 15px;
 		padding: 0 15px;
 		font-size: 1.3em; }}
 
