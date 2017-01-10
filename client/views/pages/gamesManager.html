@@ -1,3 +1,10 @@
 <template name="gamesManager">
   <h1>Games Manager</h1>
+  <ul>
+  {{#each matchmakings}}
+  <li>
+      {{createdBy}}: {{pointsMini}} 
+      </li>
+   {{/each}}
+   </ul>
 </template>
