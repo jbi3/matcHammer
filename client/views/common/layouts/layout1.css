@@ -34,6 +34,19 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 		margin: auto; }}
 @media screen and (max-width: 767px) {}
 
+/* CONTAINER */
+.container { overflow: hidden;
+	margin: 0 auto;
+	padding: 0; }
+.container:before { content: url('img/bg_container_bords_alt_haut.png');
+	position: relative;
+	top: 7px; }
+.container:after { content: url('img/bg_container_bords_alt_bas.png'); }
+
+/* FORM */
+fieldset { padding: 0 30px;
+	text-align: center; }
+
 /* NAV */
 .navbar { min-height: 40px;
 	background: rgba(0,0,0,0.7);
@@ -52,7 +65,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 
 	/* MENU modal NAV*/
 	.modal-sm  { min-width: 50%; }
-	#menuModal { background: rgba(0,0,0,0.3); }
+	#menuModal { background: rgba(0,0,0,1); }
 	#menuModal ul { padding: 0; }
 	#menuModal ul li { color: #ffffff;
 		list-style-type: none;
@@ -81,4 +94,14 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 	background: #5a5a5a;
 	border: 2px solid #434242;
 	color: #ffffff;
+	transition: 0.15s all; }
+
+.matchmakingBtn { background: #9d1d20;
+	border: 2px solid #a63e30;
+	font-size: 3em;
+	padding: 10px 30px; }
+.matchmakingBtn:hover, .matchmakingBtn:focus, .matchmakingBtn:active {
+	color: #ffffff;
+	background: #a63e30;
+	border: 2px solid #9d1d20;
 	transition: 0.15s all; }

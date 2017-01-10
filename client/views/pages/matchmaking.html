@@ -1,35 +1,34 @@
 <template name="matchmaking">
-<div id="matchmaking header">
-<p>Bienvenue dans le matchmaking </p>
-</div>
+  <div class="contentBG">
 
-<!-- {{> quickForm collection="Matchmakings" id="matchmaking" type="insert"}} -->
+    <!-- {{> quickForm collection="Matchmakings" id="matchmaking" type="insert"}} -->
 
-{{#autoForm collection="Matchmakings" id="matchmaking" type="insert"}}
-<fieldset>
-    <legend>Options</legend>
-    {{> afQuickField name='moverange'}}
-    {{> afQuickField name='pointsMini'}}
-    {{> afQuickField name='pointsMaxi'}}
-    {{> afQuickField name='army'}}
-    {{> afQuickField name='lastCheckedOut'}}
-    <div class="form-group{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
-      <div class="input-group">
-        {{> afFieldInput name='slide'}}
-</div>
-</div>
-  </fieldset>
-  <button type="submit" class="btn btn-primary">MATCH</button>
-  {{/autoForm}}
+    {{#autoForm collection="Matchmakings" id="matchmaking" type="insert"}}
+    <fieldset>
+      <p>Remplis tes critères de partie et lance une recherche.</p>
+      <button type="submit" class="btn matchmakingBtn">Matchmaking</button>      
+      {{> afQuickField name='moverange'}}
+      {{> afQuickField name='pointsMini'}}
+      {{> afQuickField name='pointsMaxi'}}
+      {{> afQuickField name='army'}}
+      {{> afQuickField name='lastCheckedOut'}}
+      <div class="form-group{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
+        <div class="input-group">
+          {{> afFieldInput name='slide'}}
+        </div>
+      </div>
+    </fieldset>
+    {{/autoForm}}
 
-<!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
-	<fieldset>
-	<legend>Paramètres de Matchmaking</legend>
-	  {{> afFieldInput type="noUiSlider" name="points" min=5 max=50 step=5}}
-	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
+    <!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
+    	<fieldset>
+    	<legend>Paramètres de Matchmaking</legend>
+    	  {{> afFieldInput type="noUiSlider" name="points" min=5 max=50 step=5}}
+    	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
 
-	  {{> afQuickField name='range' start="[50,60]"}}
-	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
-	  </fieldset>
-{{/autoForm}} -->
+    	  {{> afQuickField name='range' start="[50,60]"}}
+    	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
+    	  </fieldset>
+    {{/autoForm}} -->
+  </div>
 </template>
