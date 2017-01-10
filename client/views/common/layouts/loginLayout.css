@@ -28,7 +28,7 @@ video { margin: 0;
 	background: url('img/bg_container_alt.png'); }
 	.contentBG h1 { color: #9d1d20;
 		border-bottom: 1px dotted #444444;
-		margin: 0 15px 30px;
+		margin: 0 30px 30px;
 		padding-bottom: 30px; }
 	.contentBG p { color: #111111; }
 	
@@ -65,7 +65,7 @@ video { margin: 0;
 .legalInfos { font-size: 0.8em;
 	text-align: left;
 	color: #444444 !important;
-	margin: 0 15px 7px;
+	margin: 0 30px 7px;
 	padding: 0;
 	padding-top: 7px;
 	font-style: italic;
@@ -78,7 +78,7 @@ video { margin: 0;
 @media screen and (min-width: 768px) {
 	.loginContainer {max-width: 50%;
 		margin: 0 auto;
-		padding: 30px 15px;
+		padding: 30px 0;
 		text-align: center; }
 	#logoAccueil { max-height: 70px; }
 	h1 { margin:0;
@@ -90,16 +90,13 @@ video { margin: 0;
 		font-size: 1.5em;
 		letter-spacing: 0.5px;
 		margin: 15px 0 30px;
-		padding: 0 15px; }
-	.texteIntro { margin-bottom: 15px;
-		padding: 0 15px;
-		font-size: 1.3em; }}
+		padding: 0 15px; }}
 
 /* SCREEN =<767w */
 @media screen and (max-width: 767px) {
 	.loginContainer { max-width: 100%;
 		margin: 0 auto;
-		padding: 30px 15px;
+		padding: 30px 0;
 		text-align: center; }
 	#logoAccueil { max-height: 60px; }
 	h1 { margin:0; margin-bottom: 15px;
@@ -110,7 +107,4 @@ video { margin: 0;
 		font-size: 1.5em;
 		letter-spacing: 0.5px;
 		margin: 30px 0;
-		padding: 0 15px; }
-	.texteIntro { margin-bottom: 15px;
-		padding: 0 15px;
-		font-size: 1.3em; }}
+		padding: 0 15px; }}
