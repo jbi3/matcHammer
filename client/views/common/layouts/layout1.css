@@ -59,11 +59,21 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 /* FORM */
 #matchMaker { display: block;
 	margin: 30px 30px 0;
-	padding: 15px 0 0;
+	padding: 30px 0 0;
 	text-align: center;
 	border-top: 1px dotted #444444; }
-	#matchMaker label { color: #111111;
-	font-family: 'BebasNeueRegular', 'sans-serif'; }
+	#matchMaker label { width: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		padding: 10px;
+		font-family: 'BebasNeueRegular', 'sans-serif'; }
+	#matchMaker .form-group { margin-bottom: 10px;
+		padding: 5px 30px 10px;
+		background: #111111; }
+/* SCREEN =>768w */
+@media screen and (min-width: 768px) {
+	#matchMaker fieldset { max-width: 75%;
+		margin: auto; }}
 
 /* NAV */
 .navbar { max-width: 75%;
