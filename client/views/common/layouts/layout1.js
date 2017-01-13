@@ -99,4 +99,4 @@ var getQuote = function(quotes) {
 }
 
 document.getElementById("quotes").innerHTML = getQuote(quotesList);
-})
+});
