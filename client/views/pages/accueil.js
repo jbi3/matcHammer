@@ -29,6 +29,13 @@ Template.accueil.events({
     $('#registerModal').modal('show');
   }
 });
+//footer open modal
+Template.accueil.events({
+  'click #footerUse': function(e) {
+    e.preventDefault();
+    $('#footerModal').modal('show');
+  }
+});
 ///////////////////////////////
 /////login/register events/////
 ///////////////////////////////

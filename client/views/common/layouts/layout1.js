@@ -28,6 +28,13 @@ Template.layout1.events({
     $('#menuModal').modal('show');
   }
 });
+//footer open modal
+Template.layout1.events({
+  'click #footerUse': function(e) {
+    e.preventDefault();
+    $('#footerModal').modal('show');
+  }
+});
 
 ////////////////////////////////////////
 //menu template change view view links//

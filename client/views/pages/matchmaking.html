@@ -1,5 +1,4 @@
 <template name="matchmaking">
-  <div class="contentBG">
     <!-- {{> quickForm collection="Matchmakings" id="matchmaking" type="insert"}} -->
     <button type="submit" class="btn matchmakingBtn">Matchmaking</button>
     <p class="texteIntro">Remplis tes critères de partie et lance une recherche.</p>
@@ -14,11 +13,6 @@
       </div>
     </fieldset>
     {{/autoForm}}
-    <div class="footerInfos">
-      <p><a href="#">Terms of use</a></p>
-      <p  style="font-size:0.8em; margin-top:15px;">"Aux grands maux les grands remèdes." <span style="font-style: italic;">- Inquisiteur Horst lors de l’Exterminatus de Lowengulf.</span></p>
-    </div>
-  </div>
 <!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
 	<fieldset>
 	<legend>Paramètres de Matchmaking</legend>
@@ -27,6 +21,6 @@
 
 	  {{> afQuickField name='range' start="[50,60]"}}
 	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
-	  </fieldset>
+	</fieldset>
 {{/autoForm}} -->
 </template>

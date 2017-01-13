@@ -4,80 +4,110 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#" id="navbarMatchmakingLink"><img src="img/Logo_MatcHammer.png" style="height:20px;"></a>
       </div>
-<!--     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li> 
-    </ul> -->
-    <!-- <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
-    </ul> -->
+      <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+      </ul> -->
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+      </ul> -->
 
-    <!-- The drop down menu -->
-      <ul class="nav pull-right">
-      <!--         <li><span class="glyphicon glyphicon-menu-hamburger"></span></li> -->
-        <li class="divider-vertical"></li>
-        <li>
-          <a href="#menuModal" data-toggle="dropdown" id="menu">
-            <span class="glyphicon glyphicon-menu-hamburger"></span>
-          </a>
-        </li>
-      </ul>
+      <!-- The drop down menu -->
+        <ul class="nav pull-right">
+          <!-- <li><span class="glyphicon glyphicon-menu-hamburger"></span></li> -->
+          <li class="divider-vertical"></li>
+          <li>
+            <a href="#menuModal" data-toggle="dropdown" id="menu">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+          </li>
+        </ul>
 
-      <!-- The notification drop down display -->
-      <ul class="nav pull-right">
-        <!-- <li><span class="glyphicon glyphicon-bell"></span></li> -->
-        <li class="divider-vertical"></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-bell"></span>
-            <span class="badge">19</span>
-            <strong class="caret"></strong>
-          </a>
-          <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-            {{>notifications}}
-          </div>
-        </li>
-      </ul>
-    </div>
+        <!-- The notification drop down display -->
+        <ul class="nav pull-right">
+          <!-- <li><span class="glyphicon glyphicon-bell"></span></li> -->
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-bell"></span>
+              <span class="badge">19</span>
+              <strong class="caret"></strong>
+            </a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              {{>notifications}}
+            </div>
+          </li>
+        </ul>
+      </div>
   </nav>
   
-    <div class="container">
-       {{> yield }}
+  <div class="container">
+    <div class="contentBG">
+      {{> yield }}
+      {{>footer}}
     </div>
-    {{>menuModal}}
+  </div>
+  {{>footerModal}}
+  {{>menuModal}}
 </template>
 
 <template name="menuModal">
-<div class="modal fade" id="menuModal">
-<div class="modal-dialog modal-sm">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only">Close</span>
-        </button>
-  <ul>
-  <li>
-    <a href="{{pathFor 'matchmaking'}}" class="menuLinks" id="menuMatchmakingLink">Matchmaking</a>
-  </li>
-  <li>
-    <a href="{{pathFor 'gamesManager'}}" class="menuLinks" id="menuGamesManagerLink">Games Manager</a>
-  </li>
-  <li>
-    <a href="{{pathFor 'conversations'}}" class="menuLinks" id="menuConversationsLink">Messages</a>
-  </li>
-  <li>
-    <a href="{{pathFor 'friendsList'}}" class="menuLinks" id="menuFriendsListLink">Contacts</a>
-  </li>
-  <li>
-    <a href="{{pathFor 'profile'}}" class="menuLinks" id="menuProfileLink">Profil</a>
-  </li>
-</ul>
-  </div>
+  <div class="modal fade" id="menuModal">
+    <div class="modal-dialog modal-sm">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <ul>
+        <li>
+          <a href="{{pathFor 'matchmaking'}}" class="menuLinks" id="menuMatchmakingLink">Matchmaking</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'gamesManager'}}" class="menuLinks" id="menuGamesManagerLink">Games Manager</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'conversations'}}" class="menuLinks" id="menuConversationsLink">Messages</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'friendsList'}}" class="menuLinks" id="menuFriendsListLink">Contacts</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'profile'}}" class="menuLinks" id="menuProfileLink">Profil</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
-<template name="notifications">
-    
+<template name="notifications">  
 </template>
 
+<template name="footer">
+  <div class="footerInfos">
+    <a href="#footerModal" id="footerUse">Terms of use</a>
+    <p style="font-size:0.8em; margin-top:15px;">"Aux grands maux les grands remèdes." <span style="font-style: italic;">- Inquisiteur Horst lors de l’Exterminatus de Lowengulf.</span></p>
+  </div>
+</template>
+
+<template name="footerModal">
+  <div class="modal fade" id="footerModal">
+    <div class="modal-dialog modal-sm">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <div id="mentionsLegales" style="text-align: left;">
+      <h1>Mentions légales</h1>
+        <h2>Données personnelles</h2>
+        <p>Les informations recueillies à partir de ce formulaire font l’objet d’un traitement informatique destiné à : Match Hammer</p>
+        <p>Pour la ou les finalité(s) suivante(s) : Faire fonctionner le service de pairing en matchmaking</p>
+        <p>Le ou les destinataire(s) des données sont : Match Hammer</p>
+        <p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée, vous disposez d’un droit d’accès et de rectification aux informations qui vous concernent.</p>
+        <p>Vous pouvez accèder aux informations vous concernant en vous adressant à : Match Hammer</p>
+        <p>Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.Pour en savoir plus, consultez vos droits sur le site de la CNIL.</p>
+      </div>
+    </div>
+  </div>  
+</template>

@@ -3,22 +3,14 @@
 /* FONT-FACE 
 - Titres: Bebas Neue
 - Texte: Baskervald ADF*/
-@font-face {
-  font-family: 'BebasNeueRegular';
-  src: url('fonts/BebasNeueRegular.otf');
-}
-@font-face {
-  font-family: 'BebasNeueBold';
-  src: url('fonts/BebasNeueBold.otf');
-}
-@font-face {
-  font-family: 'BaskervaldADFStd';
-  src: url('fonts/BaskervaldADFStd.otf');
-}
-@font-face {
-  font-family: 'BaskervaldADFStd-Bold';
-  src: url('fonts/BaskervaldADFStd-Bold.otf');
-}
+@font-face { font-family: 'BebasNeueRegular';
+  src: url('fonts/BebasNeueRegular.otf'); }
+@font-face { font-family: 'BebasNeueBold';
+  src: url('fonts/BebasNeueBold.otf'); }
+@font-face { font-family: 'BaskervaldADFStd';
+  src: url('fonts/BaskervaldADFStd.otf'); }
+@font-face { font-family: 'BaskervaldADFStd-Bold';
+  src: url('fonts/BaskervaldADFStd-Bold.otf'); }
 
 /* GENERAL */
 html, body { margin: 0;
@@ -30,7 +22,6 @@ body { background: url('img/bg_body_large_glitch.png') center top;
 h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 
 /* CONTAINER */
-/* SCREEN =>768w */
 .container:before { content: url('img/bg_container_bords_alt_haut.png');
 	position: relative;
 	top: 7px; }
