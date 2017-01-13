@@ -1,5 +1,4 @@
 /* CSS declarations layout1.css */
-
 /* FONT-FACE 
 - Titres: Bebas Neue
 - Texte: Baskervald ADF*/
@@ -124,6 +123,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
 	border: 2px solid #434242;
 	color: #ffffff;
 	transition: 0.15s all; }
+
+/* MODALS */
+#footerModal { background: rgba(0,0,0,1);
+		text-align: left; }
 
 /* SCREEN >=768w */
 	@media screen and (min-width: 768px) {
