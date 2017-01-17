@@ -5,7 +5,7 @@ import './matchmaking.html';
 /*Template.matchmaking("currentFieldValue", function (fieldName) {
   return AutoForm.getFieldValue("reactiveCurrentValueForm", fieldName) || "not selected";
 });*/
-var sliderValue = salut.value;
+/*var sliderValue = salut.value;
 Template.matchmaking.rangeValue=function(){
      
      return sliderValue;
@@ -13,7 +13,7 @@ Template.matchmaking.rangeValue=function(){
 };
 
 
-/*AutoForm.hooks({
+AutoForm.hooks({
   matchMaker: {
     onSubmit: function (insertDoc, updateDoc, currentDoc) {
       

@@ -87,3 +87,16 @@ Template.menuModal.events({
       console.log(this);
       $('#menuModal').modal('hide');
      }*/
+//Citations aléatoires footer
+window.onload = (function(){
+var quotesList = ["&#171; Nous combattons ensemble et nous périrons ensemble! &#187;",
+"&#171; Soyez comme la fumée qui coupe la vue et le souffle de l’ennemi, mais qui se disperse dans le néant lorsqu’il frappe. &#187;",
+"&#171; L’épée qu’on aiguise peut se retourner contre soi. &#187;"];
+
+var getQuote = function(quotes) {
+    var choice = Math.floor(Math.random() * quotes.length);
+    return quotes[choice];
+}
+
+document.getElementById("quotes").innerHTML = getQuote(quotesList);
+});

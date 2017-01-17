@@ -1,1 +1,12 @@
 /* CSS declarations go here */
+.profileBloc { margin: auto;
+	padding: 15px 30px;
+	vertical-align: top; }
+.profileBlocImg { display: inline-block; }
+.profileBlocInfo { 
+	display: inline-block;
+	margin-left: 30px;
+	text-align: left; }
+.profileBloc fieldset {	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px dotted #444444;  }
