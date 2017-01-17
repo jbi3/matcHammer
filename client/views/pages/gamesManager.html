@@ -1,17 +1,22 @@
 <template name="gamesManager">
   <h1>Games Manager</h1>
-  <!-- {{> gamesWaitingList}}
-  <span>
+  {{> gamesWaitingList}}
+  <!-- <span>
     <span class="prefix">#</span>
     <span class="match-prefix">{{army}}</span>
 </span> -->
 </template>
 
-<!-- <template name="gamesWaintingList">
+<template name="gamesWaitingList">
 <h2>Matchs en attente</h2>
-	<div id="List">
-       {{#each MatchmakingsList}}
-    		{{> army}}
+	<div id="matchList">
+	<p>matchlist</p>
+       {{#each match}}
+       <li><ul>{{createdBy}}</ul>
+       <ul>{{moverange}} km : {{pointsMini}}-{{pointsMaxi}}</ul>
+       <ul>{{army}}</ul>
+       </li>
+
 	   {{/each}}
     </div>
-</template> -->
+</template>

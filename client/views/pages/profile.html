@@ -26,4 +26,13 @@
 			<button class="btn btn-primary" id="enregistrerModifications">Enregistrer</button>
 		</fieldset>
 	</div>
+
+	{{#if currentUser}} 
+  {{> user}}
+{{/if}}
+	<!-- {{#with currentUser}}
+    {{#with profile}}
+        {{first_name}}
+    {{/with}}
+{{/with}} -->
 </template>
