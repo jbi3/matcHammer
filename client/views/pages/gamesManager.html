@@ -12,11 +12,11 @@
 	<div id="matchList">
 	<p>matchlist</p>
        {{#each match}}
-       <li><ul>{{createdBy}}</ul>
-       <ul>{{moverange}} km : {{pointsMini}}-{{pointsMaxi}}</ul>
-       <ul>{{army}}</ul>
-       </li>
-
+       <ul>
+       <li>{{army}}</li>
+       <li>{{moverange}} km </li>
+       <li>{{pointsMini}}-{{pointsMaxi}}</li>
+       </ul>
 	   {{/each}}
     </div>
 </template>
