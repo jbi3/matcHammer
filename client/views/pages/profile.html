@@ -3,36 +3,33 @@
 	<div class="profileBloc">
 		<div class="profileBlocImg"><img src="img/avatar.png"></div>
 		<div class="profileBlocInfo">
-			<h2>user1325</h2>
+			{{currentUser.username}}
 			<button class="btn btn-primary" id="modifierAvatar">Modifier l'avatar</button>
 		</div>
 		<fieldset>
 			<div class="form-group">
 				<label for="registerPseudo">Nom d'utilisateur:</label><br>
+				{{currentUser.username}}
 	      		<input class="pseudo-input" name="registerPseudo" id="registerPseudo" type="text" placeholder="user1325">
 			</div>
 			<div class="form-group">
 				<label for="registerEmail">Email:</label><br>
+				{{mail}}
 	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="user1325@test.ts">
+	      		
 			</div>
 			<div class="form-group">
 				<label for="registerPassword">Mot de passe:</label><br>
 	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="entrez un mot de passe">
 			</div>
 			<div class="form-group">
+			{{mailingAddress}}
 				<label for="registerPlace">Adresse (ville):</label><br>
 	      		<input class="place-input" name="registerPlace" id="registerPlace" type="text" placeholder="user1325 city">
 			</div>
 			<button class="btn btn-primary" id="enregistrerModifications">Enregistrer</button>
 		</fieldset>
 	</div>
-
-	{{#if currentUser}} 
-  {{> user}}
-{{/if}}
-	<!-- {{#with currentUser}}
-    {{#with profile}}
-        {{first_name}}
-    {{/with}}
-{{/with}} -->
 </template>
+
+<!-- placeholder="user1325" -->

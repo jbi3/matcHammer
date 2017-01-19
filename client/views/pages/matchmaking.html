@@ -1,19 +1,33 @@
 <template name="matchmaking">
     <!-- {{> quickForm collection="Matchmakings" id="matchmaking" type="insert"}} -->
-    
     <p class="texteIntro">Remplis tes critères de partie et lance une recherche.</p>
-    {{#autoForm collection="Matchmakings" id="matchMaker" type="insert"}}
-    <fieldset>
-    <button type="submit" class="btn matchmakingBtn">Matchmaking</button>
-      {{> afQuickField type='noUiSlider' name='moverange' min=5 max=100 step=5}}
-      {{> afQuickField type='noUiSlider' name='pointsMini' min=100 max=1500 step=50}} 
-      {{> afQuickField type='noUiSlider' name='pointsMaxi' min=100 max=2000 step=50}}
-      {{> afQuickField name='army'}}
-      {{> afQuickField name='lastCheckedOut'}}
-      <!-- <div class="{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
-      </div> -->
-    </fieldset>
-    {{/autoForm}}
+
+<!-- formulaire de matchmaking 
+uses : aldeed:autoform, muqube:noUiSlider -->
+
+ {{#autoForm collection="Matchmakings" id="matchMaker" type="insert"}}
+     <fieldset>
+
+    	<button type="submit" class="btn matchmakingBtn">Matchmaking</button>
+	     <!-- slider -->
+	     {{> afQuickField type='noUiSlider' name='moverange' min=5 max=100 step=5}}
+	     <!-- valeure du slider -->
+	       <p>vous pouvez vous déplacer dans un rayon de {{moverange.currentFieldValue}} Km</p>
+	     <!-- same scheme -->
+	     {{> afQuickField type='noUiSlider' name='pointsMini' min=100 max=1500 step=50}} 
+	     {{> afQuickField type='noUiSlider' name='pointsMaxi' min=100 max=2000 step=50}}
+	     <!-- {{> afQuickField name="army"}} -->
+	     {{> afQuickField name="army" firstOption="(Armée déployée)" options=armyOptions}}
+	     <!-- {{> afQuickField name='lastCheckedOut'}} -->
+	     <!-- <div class="{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
+     	 </div> -->
+
+     	 <!-- test slider -->
+     	 {{> afQuickField name='slider'}} 
+     </fieldset>
+ {{/autoForm}}
+</template>
+
 <!-- {{#autoForm collection=matchmakingForms id="matchmaking" type="insert"}}
 	<fieldset>
 	<legend>Paramètres de Matchmaking</legend>
@@ -23,5 +37,5 @@
 	  {{> afQuickField name='range' start="[50,60]"}}
 	  <p>vous pouvez vous déplacer dans un rayon de {{currentFieldValue "a"}} Km.</p>
 	</fieldset>
-{{/autoForm}} -->
-</template>
+{{/autoForm}}
+</template> -->

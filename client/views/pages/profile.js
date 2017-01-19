@@ -3,8 +3,12 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './profile.html';
 
-Template.profile.helpers({
-  Name: function() {
-    return Meteor.user().profile.username;
-  }
+Template.profile.helpers ({
+
+	'mail': function() {
+    return Meteor.user().emails[0].address;
+},
+	'mailingAddress': function() {
+	return Meteor.user().postCode;
+	}
 });

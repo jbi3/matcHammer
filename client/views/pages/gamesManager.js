@@ -4,7 +4,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './gamesManager.html';
 
 /*var userLogged = Meteor.user()*/
-var playerId = this._id;
+/*var playerId = this._id;*/
 Template.gamesWaitingList.helpers ({
 
 	'match': function() {
