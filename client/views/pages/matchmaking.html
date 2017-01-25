@@ -5,25 +5,35 @@
 <!-- formulaire de matchmaking 
 uses : aldeed:autoform, muqube:noUiSlider -->
 
- {{#autoForm collection="Matchmakings" id="matchMaker" type="insert"}}
+ {{#autoForm collection="Matchmakings" name="matchMakers" id="matchMaker" type="insert"}}
      <fieldset>
 
     	<button type="submit" class="btn matchmakingBtn">Matchmaking</button>
 	     <!-- slider -->
-	     {{> afQuickField type='noUiSlider' name='moverange' min=5 max=100 step=5}}
-	     <!-- valeure du slider -->
-	       <p>vous pouvez vous déplacer dans un rayon de {{moverange.currentFieldValue}} Km</p>
-	     <!-- same scheme -->
-	     {{> afQuickField type='noUiSlider' name='pointsMini' min=100 max=1500 step=50}} 
-	     {{> afQuickField type='noUiSlider' name='pointsMaxi' min=100 max=2000 step=50}}
-	     <!-- {{> afQuickField name="army"}} -->
+	     {{> afQuickField type='noUiSlider' name='moverange' min=5 max=100 step=5 }}
+	     {{> afQuickField name='rangePoints'}} 
 	     {{> afQuickField name="army" firstOption="(Armée déployée)" options=armyOptions}}
+	     <div id="datesPicking" class="container-fluid">
+	     <div class="row">
+	     <div class="col-xs-6">
+	     {{> afQuickField type="date" name="startDate"}}
+	     </div>
+	     <div class="col-xs-6">
+	     {{> afQuickField type="date" name="endDate"}}
+	     </div>
+	     </div>
+	     </div>
+	     <!-- {{> afQuickField type='noUiSlider' name='pointsMini' min=100 max=1500 step=50}} 
+	     {{> afQuickField type='noUiSlider' name='pointsMaxi' min=100 max=2000 step=50}} -->
+	     <!-- {{> afQuickField name="army"}} -->
+	     
 	     <!-- {{> afQuickField name='lastCheckedOut'}} -->
 	     <!-- <div class="{{#if afFieldIsInvalid name='slide'}} has-error{{/if}}">
      	 </div> -->
 
+
      	 <!-- test slider -->
-     	 {{> afQuickField name='slider'}} 
+     	 
      </fieldset>
  {{/autoForm}}
 </template>
