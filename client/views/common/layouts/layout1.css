@@ -30,9 +30,12 @@ html, body {
 	background-image: url('./img/bg_body_large_glitch.png');
 	background-position: center top;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
 
 /* -------------------------------
 	WRAPPER + CONTAINER
@@ -42,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {}
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	color: #42e393;
 }
 
 .container-fluid {
@@ -50,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {}
 	margin-left: 25px;
 	margin-right: 25px;
 	background: url('./img/bckg_container.png') repeat-y;
+	transition: all 2.5s;
 }
 
 .instructions {
@@ -57,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {}
 	margin-bottom: 30px;
 	padding: 20px 5px;
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 1.6em;
 	color: #fff;
 	background: url('./img/bckg_Instructions.png') center center no-repeat;
 }
@@ -74,15 +79,34 @@ h1, h2, h3, h4, h5, h6 {}
 .matchmakingFieldset {
 	max-width: 790px;
 	margin: auto;
-	padding: 30px 25px 45px;
-	background: rgba(0, 0, 0, 0.25);
-	border: 1px solid #157045;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	background: url('./img/bckg_fieldset.png');
 	text-align: center;
 }
+.matchmakingFieldset:before {
+	content: url('./img/bckg_fieldset-before.png');
+	position: relative;
+	top: -15px;
+}
+.matchmakingFieldset:after {
+	content: url('./img/bckg_fieldset-after.png');
+	position: relative;
+	bottom: -21px;
+}
+
 .matchmakingFieldset label {
+	margin: 30px 0 15px;
+	display: block;
+	text-align: left;
 	font-family: "BaskervaldADFStd", serif;
+	font-size: 1.3em;
 	text-transform: initial;
 	letter-spacing: 0;
+}
+.form-group {
+	max-width: 85%;
+	margin: auto;
 }
 
 /* -------------------------------
@@ -125,6 +149,7 @@ footer {
 	BUTTONS 
 ------------------------------- */
 .btn {
+	font-family: "BaskervaldADFStd-Bold", serif;
 	font-size: 1.5em;
 	color: #42e393;
 	cursor: pointer;
@@ -161,4 +186,22 @@ footer {
 .at-nouislider .noUi-target {
 	border: 0.5px solid #157045;
 	box-shadow: none;
+}
+.noUi-marker {
+	background: #033d24;
+	border: 0.5px solid #157045;
+}
+.noUi-value {
+	position: absolute;
+	top: 15px;
+}
+div.form-group:nth-child(3), div.form-group:nth-child(5) {
+	min-height: 88px;
+}
+.matchmakingFieldset > img:nth-child(6) {
+	position: relative;
+	top: 18px;
+}
+.separator {
+	margin-top: 15px;
 }
