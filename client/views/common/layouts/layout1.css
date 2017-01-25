@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "BaskervaldADFStd", serif;
 	font-size: 1.3em;
 	text-transform: initial;
-	letter-spacing: 0;
+	letter-spacing: 0.5px;
 }
 .form-group {
 	max-width: 85%;
