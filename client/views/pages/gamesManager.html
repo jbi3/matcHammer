@@ -2,6 +2,8 @@
   <h1>Games Manager</h1>
   <p class="instructions">Gère les recherches et les matchs en cours.</p>
   {{> gamesWaitingList}}
+  {{> gamesActiveList}}
+  {{> gamesPastList}}
   <!-- <span>
     <span class="prefix">#</span>
     <span class="match-prefix">{{army}}</span>
@@ -9,15 +11,14 @@
 </template>
 
 <template name="gamesWaitingList">
-  <h2>Matchs en attente</h2>
 	<div class="matchmakingFieldset">
     <div class="col-xs-12 form-group">
-      <h3>matchlist</h3>
+      <h2>Matchs en attente</h2>
       {{#each match}}    
       <div class="row">
         <img src="./img/separator.png" class="separator">
        	<p class="col-xs-2">{{createdByName}}</p>
-        <p class="col-xs-2">du {{startDate}} au {{endDate}}</p>
+        <p class="col-xs-2">du <!-- {{startDate}} --> au <!-- {{endDate}} --></p>
   	    <p class="col-xs-2">{{rangePoints.lower}} - {{rangePoints.upper}}</p> 
         <p class="col-xs-2">{{army}}</p>
         <p class="col-xs-2">{{moverange}} km </p>
@@ -26,7 +27,46 @@
       </div>
       {{/each}}
     </div>
-	  
+	</div>
+</template>
+
+<template name="gamesActiveList">
+  <div class="matchmakingFieldset">
+    <div class="col-xs-12 form-group">
+      <h2>Matchs en cours</h2>
+      {{#each match}}    
+      <div class="row">
+        <img src="./img/separator.png" class="separator">
+        <p class="col-xs-2">{{createdByName}}</p>
+        <p class="col-xs-2">du <!-- {{startDate}} --> au <!-- {{endDate}} --></p>
+        <p class="col-xs-2">{{rangePoints.lower}} - {{rangePoints.upper}}</p> 
+        <p class="col-xs-2">{{army}}</p>
+        <p class="col-xs-2">{{moverange}} km </p>
+        <p class="col-xs-2">{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</p>
+        <!-- <li>{{pointsMini}}-{{pointsMaxi}}</li> -->
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="gamesPastList">
+  <div class="matchmakingFieldset">
+    <div class="col-xs-12 form-group">
+      <h2>Matchs passés</h2>
+      {{#each match}}    
+      <div class="row">
+        <img src="./img/separator.png" class="separator">
+        <p class="col-xs-2">{{createdByName}}</p>
+        <p class="col-xs-2">du <!-- {{startDate}} --> au <!-- {{endDate}} --></p>
+        <p class="col-xs-2">{{rangePoints.lower}} - {{rangePoints.upper}}</p> 
+        <p class="col-xs-2">{{army}}</p>
+        <p class="col-xs-2">{{moverange}} km </p>
+        <p class="col-xs-2">{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</p>
+        <!-- <li>{{pointsMini}}-{{pointsMaxi}}</li> -->
+      </div>
+      {{/each}}
+    </div>
   </div>
 </template>
 

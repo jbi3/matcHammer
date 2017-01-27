@@ -12,4 +12,17 @@ Template.gamesWaitingList.helpers ({
 
 }
 });
+Template.gamesActiveList.helpers ({
 
+	'match': function() {
+  return Matchmakings.find();
+
+}
+});
+Template.gamesPastList.helpers ({
+
+	'match': function() {
+  return Matchmakings.find();
+
+}
+});
