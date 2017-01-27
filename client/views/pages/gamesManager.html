@@ -14,11 +14,71 @@
 	<p>matchlist</p>
        {{#each match}}
        <ul>
-       <li>{{createdBy.username}}</li>
+       	<li>{{createdByName}} du {{startDate}} au {{endDate}}</li>
+			<li>{{rangePoints.lower}} - {{rangePoints.upper}}</li> 
        <li>{{army}}</li>
        <li>{{moverange}} km </li>
-       <li>{{pointsMini}}-{{pointsMaxi}}</li>
+       <li>{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</li>
+       <!-- <li>{{pointsMini}}-{{pointsMaxi}}</li> -->
        </ul>
 	   {{/each}}
     </div>
 </template>
+
+
+<!-- <template name="pointsIndicator">
+{{#each rangePoints}}
+       			<ul>
+					<li>{{lower}}</li>
+					<li>{{upper}}</li>
+				</ul>
+				{{/each}}
+</template> -->
+
+
+<!-- //////////tests//////////// -->
+
+<!-- {{#each rangePoints}}
+<ul>
+<li>{{lower}}</li>
+<li>{{upper}}</li>
+</ul>
+{{/each}}
+
+
+
+	   {{#each match}}
+       <ul>
+       <li>{{rangePoints}}</li>
+       <li>{{createdBy}}</li>
+       <li>{{army}}</li>
+       <li>{{moverange}} km </li>
+       <li>{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</li>
+       </ul>
+	   {{/each}} -->
+
+<!-- 	   <template name="gamesWaitingList">
+<h2>Matchs en attente</h2>
+	<div id="matchList">
+	<p>matchlist</p>
+       {{#each match}}
+       <ul>
+       	<li>{{createdBy}}</li>
+       		<li>
+       			
+       			{{#each rangePoints}}
+       			<ul>
+					<li>{{lower}}</li>
+					<li>{{upper}}</li>
+				</ul>
+				{{/each}}
+				
+			</li>
+       <li>{{createdBy}}</li>
+       <li>{{army}}</li>
+       <li>{{moverange}} km </li>
+       <li>{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</li>
+       </ul>
+	   {{/each}}
+    </div>
+</template> -->

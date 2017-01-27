@@ -47,6 +47,35 @@ Template.matchmaking.helpers({
   }
 });
 
+AutoForm.hooks({
+  matchMakers: { // Use whatever name you have given your form
+    before: {
+      method: function(doc) {
+        var form = this;
+        // clear the error that gets added on the previous error so the form can proceed the second time
+        form.removeStickyValidationError('startDate');
+        return doc;
+      }
+    },
+    onSuccess: function(operation, result, template) {
+      if (result) {
+        // do whatever you want if the form submission is successful;
+      }
+    },
+    onError: function(operation, error) {
+      var form = this;
+      if (error) {
+
+        if (error.reason && error.reason.indexOf('duplicate key error')) {
+          // We add this error to the first field so it shows up there
+          form.addStickyValidationError('startDate', 'notDateCombinationUnique'); // of course you have added this message to your definition earlier on
+          AutoForm.validateField(form.formId, 'startDate');
+        }
+
+      }
+    }
+  }
+});
 
 
 /////////////////////////////////////////////////////////////////////////////////////

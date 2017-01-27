@@ -1,4 +1,5 @@
 <template name="layout1">
+<<<<<<< HEAD
 	<div class="wrapper">
 		<!-- NAVBAR
 		***************************************************************** -->
@@ -44,6 +45,65 @@
   		{{>footerModal}}
   		{{>menuModal}}
   	</div>
+=======
+  <nav class="navbar navbar-inverse " role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#" id="navbarMatchmakingLink"><img src="img/Logo_MatcHammer.png" style="height:20px;"></a>
+      </div>
+      <div class="navbar-header">
+        <div class="navbar-header">
+        <p> Entre dans la bataille {{currentUser.username}}</p>
+      </div>
+      </div>
+      <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+      </ul> -->
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+      </ul> -->
+
+      <!-- The drop down menu -->
+        <ul class="nav pull-right">
+          <!-- <li><span class="glyphicon glyphicon-menu-hamburger"></span></li> -->
+          <li class="divider-vertical"></li>
+          <li>
+            <a href="#menuModal" data-toggle="dropdown" id="menu">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- The notification drop down display -->
+        <ul class="nav pull-right">
+          <!-- <li><span class="glyphicon glyphicon-bell"></span></li> -->
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-bell"></span>
+              <span class="badge">19</span>
+              <strong class="caret"></strong>
+            </a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              {{>notifications}}
+            </div>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  
+  <div class="container">
+    <div class="contentBG">
+      {{> yield }}
+      {{>footer}}
+    </div>
+  </div>
+  {{>footerModal}}
+  {{>menuModal}}
+>>>>>>> refs/remotes/origin/master
 </template>
 
 <!-- The drop down menu MODAL

@@ -9,5 +9,7 @@ Template.gamesWaitingList.helpers ({
 
 	'match': function() {
   return Matchmakings.find();
+
 }
 });
+
