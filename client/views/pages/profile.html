@@ -4,7 +4,7 @@
 	<div class="profileBloc">
 		<div class="profileBlocImg"><img src="img/avatar.png"></div>
 		<div class="profileBlocInfo">
-			{{currentUser.username}}
+			{{currentUser.userName}}
 			<button class="btn btn-primary" id="modifierAvatar">Modifier l'avatar</button>
 		</div>
 		<fieldset>
@@ -16,12 +16,12 @@
 			<div class="form-group">
 				<label for="registerEmail">Email:</label><br>
 				{{mail}}
-	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="user1325@test.ts">
+	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="nouvel email">
 	      		
 			</div>
 			<div class="form-group">
 				<label for="registerPassword">Mot de passe:</label><br>
-	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="entrez un mot de passe">
+	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="nouveau mot de passe">
 			</div>
 			<div class="form-group">
 			{{mailingAddress}}

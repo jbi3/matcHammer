@@ -20,17 +20,12 @@ Template.accueil.events({
     e.preventDefault();
     
     $('#loginModal').modal('show');
-  }
-});
-Template.accueil.events({
+  },
   'click #register': function(e) {
     e.preventDefault();
     
     $('#registerModal').modal('show');
-  }
-});
-//footer open modal
-Template.accueil.events({
+  },
   'click #footerUse': function(e) {
     e.preventDefault();
     $('#footerModal').modal('show');
