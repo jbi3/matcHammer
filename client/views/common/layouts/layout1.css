@@ -1,166 +1,207 @@
-/* CSS declarations layout1.css */
-/* FONT-FACE 
-- Titres: Bebas Neue
-- Texte: Baskervald ADF*/
-@font-face { font-family: 'BebasNeueRegular';
-  src: url('fonts/BebasNeueRegular.otf'); }
-@font-face { font-family: 'BebasNeueBold';
-  src: url('fonts/BebasNeueBold.otf'); }
-@font-face { font-family: 'BaskervaldADFStd';
-  src: url('fonts/BaskervaldADFStd.otf'); }
-@font-face { font-family: 'BaskervaldADFStd-Bold';
-  src: url('fonts/BaskervaldADFStd-Bold.otf'); }
+/* 	CSS declarations layout1.css
+	FONT-FACE 
+		- Titres: Bebas Neue
+		- Texte: Baskervald ADF
+------------------------------- */
+@font-face {
+	font-family: 'BebasNeueRegular';
+ 	src: url('fonts/BebasNeueRegular.otf');
+}
+@font-face {
+	font-family: 'BebasNeueBold';
+  	src: url('fonts/BebasNeueBold.otf');
+}
+@font-face { 
+	font-family: 'BaskervaldADFStd';
+  	src: url('fonts/BaskervaldADFStd.otf');
+}
+@font-face { 
+	font-family: 'BaskervaldADFStd-Bold';
+  	src: url('fonts/BaskervaldADFStd-Bold.otf');
+}
 
-/* GENERAL */
-html, body { margin: 0;
+/* -------------------------------
+	GENERAL 
+------------------------------- */
+html, body { 
+	margin: 0;
 	padding: 0;
-	height: 100%; }
-body { background: url('img/bg_body_large_glitch.png') center top;
+	font-family: 'BaskervaldADFStd', serif;
+	background-image: url('./img/bg_body_large_glitch.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
+/* -------------------------------
+	WRAPPER + CONTAINER
+------------------------------- */
+.wrapper {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #42e393;
+}
+
+.container-fluid {
+	padding: 30px 0;
+	margin: auto;
+	margin-left: 25px;
+	margin-right: 25px;
+	background: url('./img/bckg_container.png') repeat-y;
+	transition: all 2.5s;
+}
+
+.instructions {
+	margin: 0;
+	margin-bottom: 30px;
+	padding: 20px 5px;
+	text-align: center;
+	font-size: 1.6em;
 	color: #fff;
-	font-family: 'BaskervaldADFStd', serif; }
-h1, h2, h3, h4, h5, h6 { font-family: 'BebasNeueBold', 'sans-serif'; }
+	background: url('./img/bckg_Instructions.png') center center no-repeat;
+}
+.instructions:before {
+	content: "!";
+	text-indent: -9999px;
+	display: inline-block;
+	min-height: 26px;
+	min-width: 25px;
+	margin-right: 15px;
+	background: url('./img/before_instructions.png') center center no-repeat
+}
 
-/* CONTAINER */
-.container:before { content: url('img/bg_container_bords_alt_haut.png');
+.matchmakingFieldset {
+	max-width: 790px;
+	margin: auto;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	background: url('./img/bckg_fieldset.png');
+	text-align: center;
+}
+.matchmakingFieldset:before {
+	content: url('./img/bckg_fieldset-before.png');
 	position: relative;
-	top: 7px; }
-.container:after { content: url('img/bg_container_bords_alt_bas.png'); }
-	/* SCREEN >=768w */
-	@media screen and (min-width: 768px) {
-		.container { overflow: hidden;
-			max-width: 75%;
-			margin: 0 auto;
-			padding: 0;
-			text-align: center; }}
-	/* SCREEN =<767w */
-	@media screen and (max-width: 767px) {
-		.container { overflow: hidden;
-			max-width: 100%;
-			margin: 0 auto;
-			padding: 0;
-			text-align: center; }}
+	top: -15px;
+}
+.matchmakingFieldset:after {
+	content: url('./img/bckg_fieldset-after.png');
+	position: relative;
+	bottom: -21px;
+}
 
-/* FOOTER */
-.footerInfos { margin: 30px 30px 0;
-	padding: 7px 0 0;
-	text-align: center;
-	border-top: 1px dotted #444444; }
+.matchmakingFieldset label {
+	margin: 30px 0 15px;
+	display: block;
+	text-align: left;
+	font-family: "BaskervaldADFStd", serif;
+	font-size: 1.3em;
+	text-transform: initial;
+	letter-spacing: 0.5px;
+}
+.form-group {
+	max-width: 85%;
+	margin: auto;
+}
 
-/* FORM */
-#matchMaker { display: block;
-	margin: 30px 30px 0;
-	padding: 30px 0 0;
-	text-align: center;
-	border-top: 1px dotted #444444; }
-	#matchMaker label { width: 100%;
-		margin: 0 auto;
-		margin-bottom: 10px;
-		padding: 10px;
-		font-family: 'BebasNeueRegular', 'sans-serif'; }
-	.form-group { margin-bottom: 10px;
-		padding: 5px 30px 10px;
-		background: #111111; }
-/* SCREEN =>768w */
-@media screen and (min-width: 768px) {
-	#matchMaker fieldset { max-width: 75%;
-		margin: auto; }}
+/* -------------------------------
+	NAV 
+------------------------------- */
+.navbar {
+	min-height: 101px;
+	margin: 0;
+	padding: 0 50px;
+	background: url('./img/bckg_nav.png') no-repeat;
+	background-color: transparent;
+	border-radius: 0;
+	border: 0;
+}
 
-/* NAV */
-.navbar { max-width: 75%;
-	min-height: 40px;
-	margin: 0 auto;
-	background: rgba(0,0,0,0.7);
-	border: none;
-	border-radius: 0; }
-.navbar-header { margin: 0 auto !important; }
-.navbar-brand { height: 40px;
-	padding: 10px 15px; }
-.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
-	background: #790000; }
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-	background: #790000; }
-/* SCREEN =<767w */
-	@media screen and (max-width: 767px) {
-		.navbar { max-width: 100%; }
-		#navbarMatchmakingLink > img { margin: auto;
-			text-align: center; }}
-		.navbar-brand { width: 100%; }
+.connectionBox {
+	min-height: 50px;
+	min-width: 240px;
+	margin-top: 25px;
+	background-color: #090c08;
+	border: 1px solid #157045;
+}
 
-	/* ICONS NAV */
-	.glyphicon { color: #ffffff; }
-	.caret { color: #ffffff; }
+.logoBox {
+	position: relative;
+	left: 68px;
+}
 
-	/* MENU modal NAV*/
-	.modal-sm  { min-width: 50%; }
-	#menuModal { background: rgba(0,0,0,1); }
-	#menuModal ul { padding: 0; }
-	#menuModal ul li { color: #ffffff;
-		list-style-type: none;
-		text-align: center;
-		font-size: 3em;
-		line-height: 2; }
-	#menuModal ul li a { color: #ffffff;
-		text-decoration: none; }
+/* -------------------------------
+	FOOTER 
+------------------------------- */
+footer {
+	min-height: 70px;
+	margin: 0;
+	padding: 0 50px;
+	background: url('./img/bckg_footer.png') no-repeat;
+}
 
-/* BTN */
-.btn { margin: 5px;
-	font-family: 'BaskervaldADFStd-Bold', serif;
+/* -------------------------------
+	BUTTONS 
+------------------------------- */
+.btn {
+	font-family: "BaskervaldADFStd-Bold", serif;
 	font-size: 1.5em;
-	text-align: center; }
+	color: #42e393;
+	cursor: pointer;
+	border: none;
+}
+.btn:hover {
+	color: #4beec4;
+	transition: all 0.3s;
+}
+.btnCallToAction {
+	width: 351px;
+	height: 100px;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 25px 45px;
+	font-size: 3em;
+	background: url('./img/bckg_btnCallToAction.png');
+}
+.btnCallToAction:hover {
+	background: url('./img/bckg_btnCallToAction_hover.png');
+	transition: all 0.3s;
+}
 
-.btn-primary { background: #9d1d20;
-	border: 2px solid #a63e30; }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-	background: #a63e30;
-	border: 2px solid #9d1d20;
-	transition: 0.15s all; }
-
-.btn-secondary { background: #434242;
-	border: 2px solid #5a5a5a;
-	color: #ffffff; }
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-	background: #5a5a5a;
-	border: 2px solid #434242;
-	color: #ffffff;
-	transition: 0.15s all; }
-
-/* MODALS */
-#footerModal { background: rgba(0,0,0,1);
-		text-align: left; }
-
-/* SCREEN >=768w */
-	@media screen and (min-width: 768px) {
-		.matchmakingBtn { background: #9d1d20;
-			border: 2px solid #a63e30;
-			font-size: 3em;
-			padding: 10px 30px;
-			margin: 5px 5px 30px; }
-		.matchmakingBtn:hover, .matchmakingBtn:focus, .matchmakingBtn:active {
-			color: #ffffff;
-			background: #a63e30;
-			border: 2px solid #9d1d20;
-			transition: 0.15s all; }}
-	/* SCREEN =<767w */
-	@media screen and (max-width: 767px) {
-		.matchmakingBtn { background: #9d1d20;
-			border: 2px solid #a63e30;
-			font-size: 2em;
-			padding: 10px 30px;
-			margin: 5px 5px 30px; }
-		.matchmakingBtn:hover, .matchmakingBtn:focus, .matchmakingBtn:active {
-			color: #ffffff;
-			background: #a63e30;
-			border: 2px solid #9d1d20;
-			transition: 0.15s all; }}
-
-/* SCREEN =>768w */
-@media screen and (min-width: 768px) {
-	.texteIntro { margin-bottom: 15px;
-		padding: 0 15px;
-		font-size: 1.3em; }}
-
-/* SCREEN =<767w */
-@media screen and (max-width: 767px) {
-	.texteIntro { margin-bottom: 15px;
-		padding: 0 15px;
-		font-size: 1.3em; }}
+/* -------------------------------
+	NO UI SLIDER 
+------------------------------- */
+.at-nouislider .noUi-horizontal {
+	height: 5px;
+}
+.at-nouislider .noUi-background {
+	background: #033d24;
+	box-shadow: none;
+}
+.at-nouislider .noUi-target {
+	border: 0.5px solid #157045;
+	box-shadow: none;
+}
+.noUi-marker {
+	background: #033d24;
+	border: 0.5px solid #157045;
+}
+.noUi-value {
+	position: absolute;
+	top: 15px;
+}
+div.form-group:nth-child(3), div.form-group:nth-child(5) {
+	min-height: 88px;
+}
+.matchmakingFieldset > img:nth-child(6) {
+	position: relative;
+	top: 18px;
+}
+.separator {
+	margin-top: 15px;
+}

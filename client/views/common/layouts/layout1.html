@@ -1,131 +1,129 @@
 <template name="layout1">
-  <nav class="navbar navbar-inverse " role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#" id="navbarMatchmakingLink"><img src="img/Logo_MatcHammer.png" style="height:20px;"></a>
-      </div>
-      <div class="navbar-header">
-        <div class="navbar-header">
-        <p> Entre dans la bataille {{currentUser.username}}</p>
-      </div>
-      </div>
-      <!-- <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-      </ul> -->
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
-      </ul> -->
-
-      <!-- The drop down menu -->
-        <ul class="nav pull-right">
-          <!-- <li><span class="glyphicon glyphicon-menu-hamburger"></span></li> -->
-          <li class="divider-vertical"></li>
-          <li>
-            <a href="#menuModal" data-toggle="dropdown" id="menu">
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- The notification drop down display -->
-        <ul class="nav pull-right">
-          <!-- <li><span class="glyphicon glyphicon-bell"></span></li> -->
-          <li class="divider-vertical"></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-              <span class="glyphicon glyphicon-bell"></span>
-              <span class="badge">19</span>
-              <strong class="caret"></strong>
-            </a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-              {{>notifications}}
-            </div>
-          </li>
-        </ul>
-      </div>
-  </nav>
-  
-  <div class="container">
-    <div class="contentBG">
-      {{> yield }}
-      {{>footer}}
-    </div>
-  </div>
-  {{>footerModal}}
-  {{>menuModal}}
+	<div class="wrapper">
+		<!-- NAVBAR
+		***************************************************************** -->
+		<nav class="navbar navbar-inverse" role="navigation">
+      		<div class="navbar-header connectionBox">
+        		<p> Nouvelle connexion:<br> > {{currentUser.username}}</p>
+      		</div>
+      		<div class="navbar-header logoBox">
+        		<a class="navbar-brand" href="#" id="navbarMatchmakingLink"><img src="./img/Logo_MatcHammer_249x65px.png"></a>
+      		</div>
+		    <!-- The drop down menu ICON
+		    ***************************************************************** -->
+		    <ul class="nav pull-right">
+		    	<!-- <li><span class="glyphicon glyphicon-menu-hamburger"></span></li> -->
+		       	<li class="divider-vertical"></li>
+		       	<li>
+		           	<a href="#menuModal" data-toggle="dropdown" id="menu">
+		           		<img src="./img/btn_menu.png">
+		           	</a>
+		       	</li>
+		    </ul>
+		    <!-- The notification drop down display ICON
+		    ***************************************************************** -->
+		    <ul class="nav pull-right">
+		       	<!-- <li><span class="glyphicon glyphicon-bell"></span></li> -->
+		       	<li class="divider-vertical"></li>
+		       	<li class="dropdown">
+		           	<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+		           		<img src="./img/btn_notification.png">
+		           	</a>
+		       	</li>
+		    </ul>
+  		</nav>
+		
+		<!-- Dynamic template display
+		***************************************************************** -->
+	  	<div class="container-fluid">
+	  	{{#transition in="zoomIn" out="zoomOut"}}
+   			{{> yield }}
+   		{{/transition}}
+   		</div>
+   		{{>footer}}
+  		{{>footerModal}}
+  		{{>menuModal}}
+  	</div>
 </template>
 
+<!-- The drop down menu MODAL
+***************************************************************** -->
 <template name="menuModal">
-  <div class="modal fade" id="menuModal">
-    <div class="modal-dialog modal-sm">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-      </button>
-      <ul>
-        <li>
-          <a href="{{pathFor 'matchmaking'}}" class="menuLinks" id="menuMatchmakingLink">Matchmaking</a>
-        </li>
-        <li>
-          <a href="{{pathFor 'gamesManager'}}" class="menuLinks" id="menuGamesManagerLink">Games Manager</a>
-        </li>
-        <li>
-          <a href="{{pathFor 'conversations'}}" class="menuLinks" id="menuConversationsLink">Messages</a>
-        </li>
-        <li>
-          <a href="{{pathFor 'friendsList'}}" class="menuLinks" id="menuFriendsListLink">Contacts</a>
-        </li>
-        <li>
-          <a href="{{pathFor 'profile'}}" class="menuLinks" id="menuProfileLink">Profil</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  	<div class="modal fade" id="menuModal">
+    	<div class="modal-dialog modal-sm">
+      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       			<span aria-hidden="true">&times;</span>
+        		<span class="sr-only">Close</span>
+      		</button>
+      		<ul>
+        		<li>
+        			<a href="{{pathFor 'matchmaking'}}" class="menuLinks" id="menuMatchmakingLink">Matchmaking</a>
+        		</li>
+        		<li>
+  		        	<a href="{{pathFor 'gamesManager'}}" class="menuLinks" id="menuGamesManagerLink">Games Manager</a>
+ 		       	</li>
+		        <li>
+		          	<a href="{{pathFor 'conversations'}}" class="menuLinks" id="menuConversationsLink">Messages</a>
+		        </li>
+ 		       	<li>
+ 		         	<a href="{{pathFor 'friendsList'}}" class="menuLinks" id="menuFriendsListLink">Contacts</a>
+ 		       	</li>
+ 		       	<li>
+ 		         	<a href="{{pathFor 'profile'}}" class="menuLinks" id="menuProfileLink">Profil</a>
+ 		       	</li>
+ 		    </ul>
+    	</div>
+  	</div>
 </template>
 
+<!-- The notification drop down display
+***************************************************************** -->
 <template name="notifications">  
 </template>
 
+<!-- FOOTER
+***************************************************************** -->
 <template name="footer">
-  <div class="footerInfos">
-    <a href="#footerModal" id="footerUse">Mentions légales</a>
-    <p id="quotes" style="font-size:0.8em; margin-top:15px;">"Aux grands maux les grands remèdes."</p>
-  </div>
+  	<footer class="footerInfos">
+    	<a href="#footerModal" id="footerUse">Mentions légales</a>
+    	<p id="quotes" style="font-size:0.8em; margin-top:15px;">"Aux grands maux les grands remèdes."</p>
+  	</footer>
 </template>
 
+<!-- Footer MODAL
+***************************************************************** -->
 <template name="footerModal">
-  <div class="modal fade" id="footerModal">
-    <div class="modal-dialog modal-sm">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-      </button>
-      <div id="mentionsLegales" style="text-align: left;">
-      <h1>Mentions légales</h1>
+  	<div class="modal fade" id="footerModal">
+    	<div class="modal-dialog modal-sm">
+      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        		<span aria-hidden="true">&times;</span>
+        		<span class="sr-only">Close</span>
+      		</button>
+      		<div id="mentionsLegales" style="text-align: left;">
+      			<h1>Mentions légales</h1>
 
-        <h2>Informations</h2>
-        <p>Ce site, Match Hammer, est hébergé par :<br>
-        Nom<br>
-        14 adresse blabla<br>
-        91120 Palaiseau<br>
-        FRANCE</p>
-        <p>Le responsable de la publication est: ...</p>
+	      		<h2>Informations</h2>
+	        	<p>
+	        		Ce site, Match Hammer, est hébergé par :<br>
+	        		Nom<br>
+	        		14 adresse blabla<br>
+	        		91120 Palaiseau<br>
+	        		FRANCE
+	        	</p>
+	        	<p>Le responsable de la publication est: ...</p>
 
-        <h2>Copyright</h2>
-        <p>Ce site n'est pas officiel et en aucun cas autorisé ou approuvé par Games Workshop.</p>
-        <p>© Copyright Games Workshop Limited 2017. GW, Games Workshop, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited, variably registered around the world. All Rights Reserved.</p>
-        
-        <h2>Données personnelles</h2>
-        <p>Les informations recueillies à partir de ce formulaire font l’objet d’un traitement informatique destiné à : Match Hammer</p>
-        <p>Pour la ou les finalité(s) suivante(s) : Faire fonctionner le service de pairing en matchmaking</p>
-        <p>Le ou les destinataire(s) des données sont : Match Hammer</p>
-        <p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée, vous disposez d’un droit d’accès et de rectification aux informations qui vous concernent.</p>
-        <p>Vous pouvez accèder aux informations vous concernant en vous adressant à : Match Hammer</p>
-        <p>Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.Pour en savoir plus, consultez vos droits sur le site de la CNIL.</p>
-      </div>
-    </div>
-  </div>  
+	        	<h2>Copyright</h2>
+	        	<p>Ce site n'est pas officiel et en aucun cas autorisé ou approuvé par Games Workshop.</p>
+	        	<p>© Copyright Games Workshop Limited 2017. GW, Games Workshop, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited, variably registered around the world. All Rights Reserved.</p>
+	        
+	        	<h2>Données personnelles</h2>
+	        	<p>Les informations recueillies à partir de ce formulaire font l’objet d’un traitement informatique destiné à : Match Hammer</p>
+	        	<p>Pour la ou les finalité(s) suivante(s) : Faire fonctionner le service de pairing en matchmaking</p>
+	        	<p>Le ou les destinataire(s) des données sont : Match Hammer</p>
+	        	<p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée, vous disposez d’un droit d’accès et de rectification aux informations qui vous concernent.</p>
+	        	<p>Vous pouvez accèder aux informations vous concernant en vous adressant à : Match Hammer</p>
+	        	<p>Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.Pour en savoir plus, consultez vos droits sur le site de la CNIL.</p>
+      		</div>
+    	</div>
+  	</div>  
 </template>
