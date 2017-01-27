@@ -18,29 +18,45 @@ Template.matchmaking.helpers({
   armyOptions: function () {
     return [
       {
-        optgroup: "Imperium",
+        optgroup: "IMPERIUM",
         options: [
-          {label: "Adeptus Astartes", value: "Adeptus Astartes"},
           {label: "Space Marines", value: "Space Marines"},
-          {label: "Adeptus sororitas", value: "Adeptus sororitas"}
+          {label: "Blood Angels", value: "Blood Angels"},
+          {label: "Dark Angels", value: "Dark Angels"},
+          {label: "Deathwatch", value: "Deathwatch"},
+          {label: "Grey Knight", value: "Grey Knight"},
+          {label: "Space Wolves", value: "Space Wolves"},
+          {label: "Astra Militarium", value: "Astra Militarium"},
+          {label: "Militarium Tempestus", value: "Militarium Tempestus"},
+          {label: "Adepta Sororitas", value: "Adepta Sororitas"},
+          {label: "Cult Mechanicus", value: "Cult Mechanicus"},
+          {label: "Skitarii", value: "Skitarii"},
+          {label: "Inquisition", value: "Inquisition"},
+          {label: "Imperial Knights", value: "Imperial Knights"},
+          {label: "Officio Assassinorium", value: "Officio Assassinorium"}
         ]
       },
       {
-        optgroup: "Oreilles pointues",
+        optgroup: "CHAOS",
         options: [
-          {label: "Eldars", value: "Eldars"},
-          {label: "Eldars noirs", value: "Eldars noirs"},
-          {label: "Arlequins", value: "Arlequins"}
+          {label: "Chaos Space Marines", value: "Chaos Space Marines"},
+          {label: "Thousand Sons", value: "Thousand Sons"},
+          {label: "Renegade Knights", value: "Renegade Knights"},
+          {label: "Khorne Daemonkin", value: "Khorne Daemonkin"},
+          {label: "Chaos Daemons", value: "Chaos Daemons"}
         ]
       },
       {
-        optgroup: "Xenos",
+        optgroup: "XENOS",
         options: [
-          {label: "Tyranides", value: "Tyranides"},
           {label: "Orks", value: "Orks"},
-          {label: "Chaos", value: "Chaos"},
-          {label: "Chaos Demons", value: "Chaos Demons"},
-          {label: "Necrons", value: "Necrons"}
+          {label: "Eldar", value: "Eldars"},
+          {label: "Dark Eldar", value: "Dark Eldar"},
+          {label: "Harlequins", value: "Harlequins"},
+          {label: "Necrons", value: "Necrons"},
+          {label: "Tau Empire", value: "Tau Empire"},
+          {label: "Tyranids", value: "Tyranids"},
+          {label: "Genestealer Cults", value: "Genestealer Cults"}
         ]
       }
     ];

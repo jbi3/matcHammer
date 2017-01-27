@@ -9,20 +9,25 @@
 </template>
 
 <template name="gamesWaitingList">
-<h2>Matchs en attente</h2>
-	<div id="matchList">
-	<p>matchlist</p>
-       {{#each match}}
-       <ul>
-       	<li>{{createdByName}} du {{startDate}} au {{endDate}}</li>
-			<li>{{rangePoints.lower}} - {{rangePoints.upper}}</li> 
-       <li>{{army}}</li>
-       <li>{{moverange}} km </li>
-       <li>{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</li>
-       <!-- <li>{{pointsMini}}-{{pointsMaxi}}</li> -->
-       </ul>
-	   {{/each}}
+  <h2>Matchs en attente</h2>
+	<div class="matchmakingFieldset">
+    <div class="col-xs-12 form-group">
+      <h3>matchlist</h3>
+      {{#each match}}    
+      <div class="row">
+        <img src="./img/separator.png" class="separator">
+       	<p class="col-xs-2">{{createdByName}}</p>
+        <p class="col-xs-2">du {{startDate}} au {{endDate}}</p>
+  	    <p class="col-xs-2">{{rangePoints.lower}} - {{rangePoints.upper}}</p> 
+        <p class="col-xs-2">{{army}}</p>
+        <p class="col-xs-2">{{moverange}} km </p>
+        <p class="col-xs-2">{{rangePoints.RangeSchema.lower}} - {{rangePoints.RangeSchema.upper}}</p>
+        <!-- <li>{{pointsMini}}-{{pointsMaxi}}</li> -->
+      </div>
+      {{/each}}
     </div>
+	  
+  </div>
 </template>
 
 
