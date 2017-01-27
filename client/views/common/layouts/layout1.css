@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	color: #42e393;
 }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a:hover, .nav > li > a:focus {
+	background-color: transparent;
+}
 /*
 video { 
 	margin: 0;
@@ -120,6 +124,32 @@ video {
 .logoBox {
 	position: relative;
 	left: 68px;
+}
+
+.pull-right {
+	margin-top: 13px;
+}
+
+.navbar-notifications {
+	width: 58px;
+	height: 58px;
+	text-indent: -9999px;
+	background: url('./img/btn_notification.png') no-repeat center center;
+}
+.navbar-notifications:hover {
+	background: url('./img/btn_notification_hover.png') no-repeat center center;
+	transition: all 0.3s;
+}
+
+.navbar-menu {
+	width: 58px;
+	height: 58px;
+	text-indent: -9999px;
+	background: url('./img/btn_menu.png') no-repeat center center;
+}
+.navbar-menu:hover {
+	background: url('./img/btn_menu_hover.png') no-repeat center center;
+	transition: all 0.3s;
 }
 
 /* -------------------------------

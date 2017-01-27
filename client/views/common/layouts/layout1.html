@@ -10,10 +10,12 @@
 		***************************************************************** -->
 		<nav class="navbar navbar-inverse" role="navigation">
       		<div class="navbar-header connectionBox">
-        		<p><i>Nouvelle connexion ...</i><br>{{currentUser.username}}</p>
+        		<p>+++ Nouvelle connexion +++<br><i>{{currentUser.username}}</i></p>
       		</div>
       		<div class="navbar-header logoBox">
-        		<a class="navbar-brand" href="#" id="navbarMatchmakingLink"><img src="./img/Logo_MatcHammer_249x65px.png"></a>
+        		<a class="navbar-brand" href="#" id="navbarMatchmakingLink">
+        			<img src="./img/Logo_MatcHammer_249x65px.png">
+        		</a>
       		</div>
 		    <!-- The drop down menu ICON
 		    ***************************************************************** -->
@@ -22,7 +24,7 @@
 		       	<li class="divider-vertical"></li>
 		       	<li>
 		           	<a href="#menuModal" data-toggle="dropdown" id="menu">
-		           		<img src="./img/btn_menu.png">
+		           		<p class="navbar-menu">Menu</p>
 		           	</a>
 		       	</li>
 		    </ul>
@@ -33,7 +35,7 @@
 		       	<li class="divider-vertical"></li>
 		       	<li class="dropdown">
 		           	<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-		           		<img src="./img/btn_notification.png">
+		           		<p class="navbar-notifications">Notifications</p>
 		           	</a>
 		       	</li>
 		    </ul>
