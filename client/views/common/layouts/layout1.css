@@ -212,3 +212,14 @@ footer {
 	position: absolute;
 	top: 15px;
 }
+.noUi-handle {
+	cursor: grab;
+	position: relative;
+	top: -12px !important;
+	background: #033d24 !important;
+	border: 1px solid #157045 !important;
+	box-shadow: inset 0 0 1px #157045, inset 0 1px 7px #157045, 0 3px 6px -3px #157045 !important;
+}
+.noUi-handle:before, .noUi-handle:after {
+	background: #42e393 !important;
+}
