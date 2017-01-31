@@ -1,5 +1,24 @@
 <template name="loginLayout">
-    <div class="loginContainer">
-	    {{> yield}}
+    <div class="wrapper">
+    	<!-- NAVBAR
+		***************************************************************** -->
+		<nav class="navbar navbar-inverse" role="navigation">
+      		<div class="navbar-header logoBox">
+        		<a class="navbar-brand" href="#" id="navbarMatchmakingLink">
+        			<img src="./img/Logo_MatcHammer_249x65px.png">
+        		</a>
+      		</div>
+      	</nav>
+	    <!-- Dynamic template display
+		***************************************************************** -->
+	  	<div class="container-fluid">
+	  	{{#transition in="zoomIn" out="zoomOut"}}
+   			{{> yield }}
+   		{{/transition}}
+   		</div>
+   		{{>footer}}
+  		{{>footerModal}}
+  		{{>loginModalTemplate}}
+  		{{>registerModalTemplate}}
     </div>
 </template>
