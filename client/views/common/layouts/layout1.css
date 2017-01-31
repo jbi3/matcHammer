@@ -42,10 +42,26 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: transparent;
 }
 
+video {
+	margin: 0;
+  	padding: 0;
+ 	position: fixed;
+ 	top: 55%; 
+ 	left: 50%;
+  	z-index: 1;
+  	min-width: 100%;
+  	min-height: 100%;
+  	width: auto;
+  	height: auto;
+  	transform: translate(-50%, -50%); 
+}
+
 /* -------------------------------
 	WRAPPER + CONTAINER
 ------------------------------- */
 .wrapper {
+	position: relative;
+	z-index: 2;
 	max-width: 1000px;
 	margin: auto;
 	margin-top: 30px;
@@ -106,6 +122,27 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0;
 		padding: 0;
 	}
+	@keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	.connectionBoxNew {
+		opacity: 1;
+	    -webkit-animation: blink 1.5s infinite;
+	    -moz-animation: blink 1.5s infinite;
+	    animation: blink 1.5s infinite;
+	}
 
 .logoBox {
 	position: relative;
@@ -146,6 +183,30 @@ footer {
 	margin: 0;
 	padding: 0 50px;
 	background: url('./img/bckg_footer.png') no-repeat;
+}
+
+/* -------------------------------
+	MODAL 
+------------------------------- */
+.modal {
+	width: 100%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image: url('./img/bg_body_large_glitch_modal.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.modal-backdrop {
+	z-index: 0;
+}
+
+.modal ul li {
+	list-style-type: none;
+	font-size: 2.5em;
+}
+.modal ul li a {
+	color: #fff;
 }
 
 /* -------------------------------
