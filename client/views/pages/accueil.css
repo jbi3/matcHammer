@@ -1,1 +1,16 @@
 /* CSS declarations go here */
+.texteIntro {
+	margin: 3vh 30px 3vh;
+	padding: 3vh 30px;
+	border-bottom: 1px dotted #157045;
+	border-top: 1px dotted #157045;
+}
+#h3Accueil {
+	margin: 0 30px 3vh;
+	padding: 2vh 30px 3vh;
+	border-bottom: 1px dotted #157045;
+}
+#h1Accueil {
+	font-size: 3.5em;
+	font-family: 'BebasNeueBold', sans-serif;
+}
