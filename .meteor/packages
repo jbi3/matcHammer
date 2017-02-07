@@ -30,8 +30,8 @@ muqube:autoform-nouislider
 aldeed:autoform
 webtempest:animate
 aldeed:collection2
-accounts-facebook
-service-configuration
+accounts-facebook@1.0.11
+service-configuration@1.0.11
 useraccounts:bootstrap
 peppelg:bootstrap-3-modal
-email
+email@1.1.18
