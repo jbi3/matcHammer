@@ -45,3 +45,29 @@
 .matchmakingFieldset .separator {
 	margin-top: 15px;
 }
+
+/* SCREEN =<1024w */
+@media screen and (max-width: 1024px) {
+	.matchmakingFieldset {
+	max-width: 710px;
+	margin: auto;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	background: url('./img/bckg_fieldset_small.png');
+	text-align: center;
+	}
+	.matchmakingFieldset:before {
+	content: url('./img/bckg_fieldset-before_small.png');
+	position: relative;
+	top: -15px;
+	}
+	.matchmakingFieldset:after {
+	content: url('./img/bckg_fieldset-after_small.png');
+	position: relative;
+	bottom: -22px;
+	}
+}
+
+#instructionsDiv {
+	margin-top: 30px;
+}
