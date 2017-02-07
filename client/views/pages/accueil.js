@@ -115,6 +115,22 @@ Accounts.onCreateUser(function(options, user) {
 
 // test accounts package
 
+  mySubmitFunc = function(error, state){
+  if (!error) {
+    if (state === 'signIn') {
+      $('#loginModal').modal('toggle');
+      $('.modal-backdrop').remove();
+      /*Modal.hide('loginModalTemplate');*/
+      Router.go('/matchmaking');
+    }
+    if (state === 'signUp') {
+      // Successfully registered
+      $('.modal-backdrop').remove();
+      /*Modal.hide('loginModalTemplate');*/
+      Router.go('/profile');    
+    }
+  }
+};
 
 AccountsTemplates.configure({
     // Behavior

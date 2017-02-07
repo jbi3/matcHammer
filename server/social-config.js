@@ -12,23 +12,8 @@ ServiceConfiguration.configurations.insert({
     appId: '753838591439705',
     secret: 'e8bed3a6991e20df15e544e73009a10a'
 });
-if (Meteor.isServer){
-	mySubmitFunc = function(error, state){
-  if (!error) {
-    if (state === 'signIn') {
-    	$('#loginModal').modal('toggle');
-      $('.modal-backdrop').remove();
-      Modal.hide('loginModalTemplate')
-      Router.go('/matchmaking');
-    }
-    if (state === 'signUp') {
-      // Successfully registered
-      $('.modal-backdrop').remove();
-      Modal.hide('loginModalTemplate')
-      Router.go('/profile');    
-  	}
-  }
-};
+/*if (Meteor.isServer){*/
+
 //get profile facebook profile picture
 /*Accounts.onCreateUser(function(options, user) {
         options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
@@ -36,4 +21,4 @@ if (Meteor.isServer){
     return user;
 
     });*/
-}
+//}
