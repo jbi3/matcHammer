@@ -13,11 +13,15 @@
 		<img scr="{{currentUser.services.facebook.picture}}">
 		</div>
 		<div class="profileBlocInfo">
+<<<<<<< HEAD
 			{{#if currentUser}}
   				<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
 			{{/if}}
 		<!-- <img src="currentUser.profile.picture"> -->
 			{{currentUser.userName}}
+=======
+			{{currentUser.username}}
+>>>>>>> parent of 71046ef... up
 			<button class="btn btn-primary" id="modifierAvatar">Modifier l'avatar</button>
 		</div>
 		<!-- <fieldset>
@@ -29,12 +33,12 @@
 			<div class="form-group">
 				<label for="registerEmail">Email:</label><br>
 				{{mail}}
-	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="nouvel email">
+	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="user1325@test.ts">
 	      		
 			</div>
 			<div class="form-group">
 				<label for="registerPassword">Mot de passe:</label><br>
-	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="nouveau mot de passe">
+	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="entrez un mot de passe">
 			</div>
 			<div class="form-group">
 			{{mailingAddress}}
