@@ -15,7 +15,9 @@ checkPasswordIsValid = function (aString) {
 ////////////////////////
 ////// open modals//////
 ////////////////////////
+
 Template.accueil.events({
+/*	
   'click #login': function(e) {
     e.preventDefault();
     
@@ -25,16 +27,30 @@ Template.accueil.events({
     e.preventDefault();
     
     $('#registerModal').modal('show');
+  },*/
+  'click #login': function(e) {
+    e.preventDefault();
+    
+    Modal.show('loginModalTemplate');
   },
+  'click #facebook-login': function(event) {
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            }
+        });
+    },
   'click #footerUse': function(e) {
     e.preventDefault();
     $('#footerModal').modal('show');
   }
 });
+
 ///////////////////////////////
 /////login/register events/////
 ///////////////////////////////
-if (Meteor.isClient){
+
+/*if (Meteor.isClient){
 
   Template.loginModalTemplate.events({
     'submit form': function(event) {
@@ -71,10 +87,87 @@ if (Meteor.isClient){
            }
          else{
         	console.log("error");
-          /*$('#registerModal').modal('show');*/
           $('.modal-backdrop').remove();
           Router.go('/accueil');
          }
 	   }
  });
 }
+*/
+
+
+/*if (Meteor.isClient){
+
+
+
+Accounts.onCreateUser(function(options, user) {  
+  user.profile = {};
+
+  // we wait for Meteor to create the user before sending an email
+  Meteor.setTimeout(function() {
+    Accounts.sendVerificationEmail(user._id);
+  }, 2 * 1000);
+
+  return user;
+});
+
+}*/
+
+// test accounts package
+
+
+AccountsTemplates.configure({
+    // Behavior
+    confirmPassword: true,
+    enablePasswordChange: true,
+    forbidClientAccountCreation: false,
+    overrideLoginErrors: true,
+    sendVerificationEmail: true,
+    lowercaseUsername: false,
+    focusFirstInput: true,
+
+    // Appearance
+    showAddRemoveServices: false,
+    showForgotPasswordLink: false,
+    showLabels: true,
+    showPlaceholders: true,
+    showResendVerificationEmailLink: false,
+
+    // Client-side Validation
+    continuousValidation: false,
+    negativeFeedback: false,
+    negativeValidation: true,
+    positiveValidation: true,
+    positiveFeedback: true,
+    showValidating: true,
+
+    // Privacy Policy and Terms of Use
+    privacyUrl: 'privacy',
+    termsUrl: 'terms-of-use',
+
+    // Redirects
+    homeRoutePath: '/matchmaking',
+    redirectTimeout: 4000,
+
+    // Hooks
+   // onLogoutHook: myLogoutFunc,
+    onSubmitHook: mySubmitFunc,
+   // preSignUpHook: myPreSubmitFunc,
+   // postSignUpHook: myPostSubmitFunc,
+
+    // Texts
+    texts: {
+      button: {
+          signUp: "Création de compte"
+      },
+      socialSignUp: "Créer un compte",
+      socialIcons: {
+          "meteor-developer": "fa fa-rocket"
+      },
+      title: {
+      forgotPwd: "mot de passe oublier",
+      signIn: "connection"
+      },
+    },
+});
+

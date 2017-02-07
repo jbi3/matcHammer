@@ -2,12 +2,25 @@
  	<h1>mon Profil</h1>
  	<p class="instructions">Gère ton profil et tes informations.</p>
 	<div class="profileBloc">
-		<div class="profileBlocImg"><img src="img/avatar.png"></div>
+		<div class="profileBlocImg">
+		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+
+	<!-- 	{{#if currentUser}}
+  <img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+{{/if}} -->
+		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+		<img scr="{{currentUser.services.facebook.picture}}">
+		</div>
 		<div class="profileBlocInfo">
+			{{#if currentUser}}
+  				<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+			{{/if}}
+		<!-- <img src="currentUser.profile.picture"> -->
 			{{currentUser.userName}}
 			<button class="btn btn-primary" id="modifierAvatar">Modifier l'avatar</button>
 		</div>
-		<fieldset>
+		<!-- <fieldset>
 			<div class="form-group">
 				<label for="registerPseudo">Nom d'utilisateur:</label><br>
 				{{currentUser.username}}
@@ -29,7 +42,7 @@
 	      		<input class="place-input" name="registerPlace" id="registerPlace" type="text" placeholder="user1325 city">
 			</div>
 			<button class="btn btn-primary" id="enregistrerModifications">Enregistrer</button>
-		</fieldset>
+		</fieldset> -->
 	</div>
 </template>
 

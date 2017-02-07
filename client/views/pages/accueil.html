@@ -17,7 +17,7 @@
         </p>
         <div id ="registerDiv">
           {{#animate type="bounce" delay="200"}}
-          <button class="btn btn-primary" id="register">S'enregistrer</button>
+          {{> loginButtons}}
           {{/animate}}
         </div>
         <div id="loginDiv">
@@ -34,19 +34,27 @@
       </div>
     </div>
   </div>
-  {{>loginModalTemplate}}
-  {{>registerModalTemplate}}
+  {{loginModalTemplate}}
+  <!-- {{>registerModalTemplate}} -->
   {{>footerModal}}
 </template>
+
+
+<!-- les modales  -->
 
 <template name="loginModalTemplate">
 <div class="modal fade" id="loginModal">
 <div class="modal-dialog modal-sm">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           <span class="sr-only">Close</span>
-        </button>
-  <form class="login-form">
+        </button> -->
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<div class="modal-content">
+<div class="modal-body">
+<div id="login" class="form-signin">
+        {{> atForm}}
+  <!-- <form class="login-form">
     <div>
       <label for="loginEmail">Adresse email:</label>  
       <input class="email-address-input" name="loginEmail" id="loginEmail"  type="text" placeholder="entrez votre e-mail">
@@ -58,12 +66,15 @@
     <div>
       <button type="submit" class="btn btn-primary" id="loginButton" value="login">Se connecter</button>
     </div>
-  </form>
+  </form> -->
   </div>
-  </div>  
+  </div>
+  </div> 
+  </div>
+  </div> 
 </template>
 
-<template name="registerModalTemplate">
+<!-- <template name="registerModalTemplate">
   <div class="modal fade" id="registerModal">
   <div class="modal-dialog modal-sm">
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -97,4 +108,4 @@
   </form>
   </div>
   </div>
-  </template>
+  </template>  -->
