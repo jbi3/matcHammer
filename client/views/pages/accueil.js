@@ -18,6 +18,11 @@ checkPasswordIsValid = function (aString) {
 
 Template.accueil.events({
 /*	
+  'click #login': function(e) {
+    e.preventDefault();
+    
+    $('#loginModal').modal('show');
+  },
   'click #register': function(e) {
     e.preventDefault();
     
@@ -161,7 +166,7 @@ AccountsTemplates.configure({
       },
       title: {
       forgotPwd: "mot de passe oublier",
-      signIn: "connexion"
+      signIn: "connection"
       },
     },
 });
