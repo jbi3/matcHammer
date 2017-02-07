@@ -17,11 +17,22 @@ checkPasswordIsValid = function (aString) {
 ////////////////////////
 
 Template.accueil.events({
+<<<<<<< HEAD
 /*	
+=======
+  'click #login': function(e) {
+    e.preventDefault();
+    
+    $('#loginModal').modal('show');
+  }
+});
+Template.accueil.events({
+>>>>>>> parent of 71046ef... up
   'click #register': function(e) {
     e.preventDefault();
     
     $('#registerModal').modal('show');
+<<<<<<< HEAD
   },*/
   'click #login': function(e) {
     e.preventDefault();
@@ -35,6 +46,12 @@ Template.accueil.events({
             }
         });
     },
+=======
+  }
+});
+//footer open modal
+Template.accueil.events({
+>>>>>>> parent of 71046ef... up
   'click #footerUse': function(e) {
     e.preventDefault();
     $('#footerModal').modal('show');
