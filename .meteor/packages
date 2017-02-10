@@ -35,3 +35,6 @@ service-configuration@1.0.11
 useraccounts:bootstrap
 peppelg:bootstrap-3-modal
 email@1.1.18
+cfs:standard-packages
+cfs:filesystem
+cfs:autoform
