@@ -23,6 +23,7 @@ html, body {
 	background-image: url('../img/loginLayout_header.png');
 	background-position: center center;
 	background-size: cover;
+	box-shadow: 0 3px 11px #000;
 }
 #logoBoxLogin {
 	position: relative;

@@ -1,16 +1,15 @@
 <template name="loginLayout">
   <div id="loader-wrapper">
     <div id="loader"></div>
+    <div class="loader-text-auto"><p>Autorisation en cours ...</p></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
   </div>
-  {{#animate type="fadeIn"}}
     <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" width="1920" height="1028" poster="img/bg_body_large_glitch.png">
       <source src="media/bg_body_large_glitch_animated.mp4" type="video/mp4" />
   	  <source src="media/bg_body_large_glitch3.ogv" type="video/ogg" />
   	  <source src="media/bg_body_large_glitch3.webm" type="video/webm" />
   	</video>
-  {{/animate}}
   <div class="wrapper-fluid">
     <!-- NAVBAR
     ***************************************************************** -->
