@@ -38,3 +38,5 @@ email@1.1.18
 cfs:standard-packages
 cfs:filesystem
 cfs:autoform
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker
