@@ -30,15 +30,7 @@ html, body {
 }
 
 /* SIGN-IN + SIGN-UP */
-#loginDiv, #registerDiv { display: inline-block; }
 	/* Modals */
-	#loginModal .modal-sm, #registerModal .modal-sm {
-		background: none;
-		padding: 15px 20px; }
-	#loginModal, #registerModal { 
-		background: rgba(0,0,0,1);
-		text-align: left; 
-	}
 	.close { 
 		color: #ffffff;
 		opacity: 1;

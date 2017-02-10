@@ -217,6 +217,29 @@ footer {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+.modal-content {
+	color: #40dd8f;
+	background: url('./img/bckg_container.png') center center;
+	border: 1px solid #146d43;
+}
+.modal-content label {
+	margin: 30px 0 15px;
+	display: block;
+	text-align: left;
+	font-family: "BaskervaldADFStd", serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform: initial;
+	letter-spacing: 0.5px;
+}
+
+.modal-content input, .modal-content select {
+	background: #033d24;
+	color: #4beec4;
+	border: 0.5px solid #157045;
+	border-radius: 0;
+}
+
 .modal-backdrop {
 	z-index: 0;
 }
@@ -227,6 +250,15 @@ footer {
 }
 .modal ul li a {
 	color: #fff;
+}
+button.at-social-btn i {
+    float: none;
+    width: 40px;
+    font-size: 20px;
+    margin-top: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* -------------------------------
@@ -263,6 +295,13 @@ footer {
 	border: 4px double #156e44;
 	border-radius: 0;
 	font-size: 3em;
+}
+.btn-default {
+	padding: 2vh 3vw;
+	background: rgba(0, 0, 0, 0.7);
+	border: 4px double #156e44;
+	border-radius: 0;
+	font-size: 1.5em;
 }
 
 /* -------------------------------

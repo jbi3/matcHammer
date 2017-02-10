@@ -116,6 +116,12 @@ Accounts.onCreateUser(function(options, user) {
       $('#loginModal').modal('toggle');
       $('.modal-backdrop').remove();
       /*Modal.hide('loginModalTemplate');*/
+      $(document).ready(function() { 
+          $('body').removeClass('loaded');
+          setTimeout(function(){
+              $('body').addClass('loaded');
+          }, 3000);       
+      });
       Router.go('/matchmaking');
     }
     if (state === 'signUp') {

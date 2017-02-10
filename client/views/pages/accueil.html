@@ -25,33 +25,16 @@
 
 <!-- les modales  -->
 <template name="loginModalTemplate">
-<div class="modal fade" id="loginModal">
-<div class="modal-dialog modal-sm">
-<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only">Close</span>
-        </button> -->
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<div class="modal-content">
-<div class="modal-body">
-<div id="login" class="form-signin">
-        {{> atForm}}
-  <!-- <form class="login-form">
-    <div>
-      <label for="loginEmail">Adresse email:</label>  
-      <input class="email-address-input" name="loginEmail" id="loginEmail"  type="text" placeholder="entrez votre e-mail">
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-sm">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="login" class="form-signin">
+            {{> atForm}}
+          </div>
+        </div>
+      </div> 
     </div>
-    <div>
-      <label for="loginPassword">Mot de passe:</label> 
-      <input class="password-input" name="loginPassword" id="loginPassword"  type="password" placeholder="entrez votre mot de passe">
-    </div>
-    <div>
-      <button type="submit" class="btn btn-primary" id="loginButton" value="login">Se connecter</button>
-    </div>
-  </form> -->
-  </div>
-  </div>
-  </div> 
-  </div>
   </div> 
 </template>
