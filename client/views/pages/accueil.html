@@ -1,28 +1,29 @@
 <template name="accueil">
-  <div class="matchmakingFieldset">
+  <div id="accueilDiv">
+        {{#animate type="fadeInUp" delay="3000"}}
         <h1 id="h1Accueil">Trouve de nouveaux joueurs !</h1>
+        {{/animate}}
+        {{#animate type="fadeInUp" delay="3000"}}
         <p class="texteIntro">
         Système de matchmaking pour le jeu Warhammer 40.000&trade;.<br>
         Affronte de nouveaux adversaires proches de chez toi !
         </p>
+        {{/animate}}
+        {{#animate type="fadeInUp" delay="3000"}}
         <div id ="registerDiv">
-          {{#animate type="bounce" delay="200"}}
-          <button class="btn btnCallToAction" id="login">Connexion</button>
-          {{/animate}}
-        </div>
-        <h3 id="h3Accueil">"Dans cet univers, il n’y a que la guerre !"</h3>
-        <p class="legalInfos">
+          <button class="btn btn-primary" id="login">Connexion</button>
+        </div>    
+        {{/animate}}   
+  </div>
+  <p class="legalInfos">
           <strong>Ce site n'est pas officiel et en aucun cas autorisé ou approuvé par Games Workshop.</strong><br>
           &copy; Copyright Games Workshop Limited 2017. GW, Games Workshop, Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo, and all associated logos, illustrations, images, names, creatures, races, vehicles, locations, weapons, characters, and the distinctive likenesses thereof, are either &reg; or &trade;, and/or &copy; Games Workshop Limited, variably registered around the world. All Rights Reserved.
         </p>
-  </div>
   {{loginModalTemplate}}
-  <!-- {{>registerModalTemplate}} -->
 </template>
 
 
 <!-- les modales  -->
-
 <template name="loginModalTemplate">
 <div class="modal fade" id="loginModal">
 <div class="modal-dialog modal-sm">
@@ -54,39 +55,3 @@
   </div>
   </div> 
 </template>
-
-<!-- <template name="registerModalTemplate">
-  <div class="modal fade" id="registerModal">
-  <div class="modal-dialog modal-sm">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only">Close</span>
-        </button>
-  <form class="register-form">
-    <div>  
-      <label for="registerPseudo">Nom d'utilisateur:</label>
-      <input class="pseudo-input" name="registerPseudo" id="registerPseudo" type="text" placeholder="entrez un pseudo">
-    </div>
-	<div>
-      <label for="registerEmail">Adresse email:</label>  
-      <input class="email-address-input" name="registerEmail" id="registerEmail" type="email" placeholder="entrez un e-mail valide">
-    </div>
-    <div>
-      <label for="registerPassword">Mot de passe:</label>  
-      <input class="password-input" type="password" name="registerPassword" id="registerPassword" placeholder="choisissez un mdp">
-    </div>
-    <div>
-      <label for="registerConfirmPassword">Confirmer mot de passe:</label>  
-      <input class="passwordConfirm-input" type="password" name="registerConfirmPassword" id="registerConfirmPassword" placeholder="confirmez le mdp">
-    </div>
-    <div>
-      <label for="registerAddress">code postal:</label>  
-      <input class="address-input" type="text" name="registerAddress" id="registerAddress" placeholder="code postal de votre ville">
-    </div>
-    <div>
-      <button type="submit" class="btn btn-primary" value="Register">S'enregistrer</button>
-    </div>
-  </form>
-  </div>
-  </div>
-  </template>  -->
