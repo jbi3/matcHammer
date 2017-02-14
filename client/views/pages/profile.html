@@ -1,4 +1,12 @@
 <template name="profile">
+
+{{#autoForm collection="UserProfiles" type="insert"}}
+    {{> afQuickField name="picture"}}
+    {{> afQuickField name="userSurname"}}
+    {{> afQuickField name="location"}}
+    <button type="submit" class="btn btn-primary">Insert</button>
+{{/autoForm}}
+
  	<h1>mon Profil</h1>
  	<p class="instructions">Gère ton profil et tes informations.</p>
 	<div class="profileBloc">
