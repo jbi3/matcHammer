@@ -2,6 +2,8 @@
 html, body {
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 .wrapper-fluid {
 	margin: 0;
@@ -9,7 +11,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	z-index: 3;
+	z-index: 10;
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -19,7 +21,7 @@ html, body {
 	width: 100%;
 	position: absolute;
 	top: 0;
-	z-index: 4;
+	z-index: 20;
 	background-image: url('../img/loginLayout_header.png');
 	background-position: center center;
 	background-size: cover;
@@ -30,13 +32,18 @@ html, body {
 	left: 310px;
 }
 
-/* SIGN-IN + SIGN-UP */
+/* --------------------
+	SIGN-IN + SIGN-UP
+-------------------- */
 	/* Modals */
 	.close { 
 		color: #ffffff;
 		opacity: 1;
+		-webkit-transition: all 0.3s;
+			transition: all 0.3s;
 	}
-	.close:hover { color: #ffffff; }
+	.close:hover { color: #42e393; }
+	
 		/* FORM modal */
 		.modal-sm input { 
 			width: 100%; 
