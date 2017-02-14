@@ -48,26 +48,7 @@ html, body {
 		.modal-sm input { 
 			width: 100%; 
 		}
-		label { 
-			margin:10px 0 5px;
-			font-family: 'BebasNeueRegular', 'sans-serif';
-			font-size: 1.5em;
-			color: #ffffff;
-			text-transform: uppercase;
-			text-align: left;
-			letter-spacing: 1px; 
-		}
-		input, textarea, select {
-			margin: 0px 0px 15px;
-			padding: 5px 10px;
-			background: #e6e6e6;
-			border-radius: 5px;
-			border: 1px solid #303030;
-			box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-			font-family: 'BaskervaldADFStd', serif;
-			color: #2e2e2e; 
-		}
-
+	
 /* LEGAL INFORMATIONS */
 .legalInfos { 
 	position: absolute;

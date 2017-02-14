@@ -301,18 +301,52 @@ button.at-social-btn i {
 	border: 4px double #156e44;
 	border-radius: 0;
 	font-size: 3em;
+	-webkit-transition: all 0.3s;
+		transition: all 0.3s;
 }
+
 .btn-default {
 	padding: 2vh 3vw;
 	background: rgba(0, 0, 0, 0.7);
 	border: 4px double #156e44;
 	border-radius: 0;
 	font-size: 1.5em;
+	-webkit-transition: all 0.3s;
+		transition: all 0.3s;
 }
+	.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-default:hover, .btn-default:active, .btn-default:focus {
+		background: rgba(0, 0, 0, 1);
+		border-color: #42e393;
+	}
 
 /* -------------------------------
-	NO UI SLIDER 
+	FORM
 ------------------------------- */
+label { 
+	margin:10px 0 5px;
+	font-family: 'BebasNeueRegular', 'sans-serif';
+	font-size: 1.5em;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: left;
+	letter-spacing: 1px; 
+}
+input, textarea, select {
+	margin: 0px 0px 15px;
+	padding: 5px 10px;
+	background: #e6e6e6;
+	border-radius: 5px;
+	border: 1px solid #303030;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.7) !important;
+	font-family: 'BaskervaldADFStd', serif;
+	color: #2e2e2e; 
+}
+input:active, textarea:active, select:active, input:focus, textarea:focus, select:focus {
+	border-color: #42e393 !important;
+	box-shadow: 0 0 5px #42e393 !important;
+}
+
+
 .at-nouislider .noUi-horizontal {
 	height: 5px;
 }
@@ -344,6 +378,28 @@ button.at-social-btn i {
 	background: #42e393 !important;
 }
 
+/* -------------------------------
+	datepicker
+------------------------------- */
+.datepicker {
+	background-color: #0e130c;
+	border: 1px solid #42e393;
+	color: #42e393;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+    border-top: 6px solid #42e393;
+}
+
+.day:hover, th:hover {
+	background: #033d24 !important;
+}
+.dow:hover {
+	background: none !important;
+}
+.datepicker .active.day {
+	background: #033d24 !important;
+}
 /* -------------------------------
 	PRE LOADER
 ------------------------------- */
