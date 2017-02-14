@@ -502,13 +502,10 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
 
     #loader-wrapper .loader-section.section-left {
         left: 0;
-		box-shadow: inset 35px 0 80px rgba(0, 0, 0, 0.5);
     }
 
     #loader-wrapper .loader-section.section-right {
         right: 0;
-        border-left: 8px solid #111;
-        box-shadow: inset -35px 0 80px rgba(0, 0, 0, 0.5);
     }
 
     /* Loaded */
