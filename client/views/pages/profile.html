@@ -1,10 +1,13 @@
 <template name="profile">
 
+<div id ="locationDiv">
+          <button class="btn btn-secondary" id="locate">changer la localisation</button>
+        </div> 
 {{#autoForm collection="UserProfiles" type="insert"}}
     {{> afQuickField name="picture"}}
     {{> afQuickField name="userSurname"}}
-    {{> afQuickField name="location"}}
-    <button type="submit" class="btn btn-primary">Insert</button>
+    
+    <button type="submit" class="btn btn-secondary">Sauvegarder</button>
 {{/autoForm}}
 
  	<h1>mon Profil</h1>
@@ -52,6 +55,24 @@
 			<button class="btn btn-primary" id="enregistrerModifications">Enregistrer</button>
 		</fieldset> -->
 	</div>
+</template>
+
+<template name="locationModalTemplate">
+  <div class="modal fade" id="locationModal">
+    <div class="modal-dialog modal-sm">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="locate">
+          {{#autoForm collection="UserProfiles" type="insert"}}
+            {{> afQuickField name="location"}}
+            {{/autoForm}}
+            <button type="submit" class="btn btn-secondary">Sauvegarder</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div> 
 </template>
 
 <!-- placeholder="user1325" -->

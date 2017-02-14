@@ -3,7 +3,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './accueil.html';
 
-checkEmailIsValid = function (aString) {
+/*checkEmailIsValid = function (aString) {
   aString = aString || '';
   return aString.length > 1 && aString.indexOf('@') > -1;
 }
@@ -11,7 +11,7 @@ checkEmailIsValid = function (aString) {
 checkPasswordIsValid = function (aString) {
   aString = aString || '';
   return aString.length > 7;
-}
+}*/
 ////////////////////////
 ////// open modals//////
 ////////////////////////
