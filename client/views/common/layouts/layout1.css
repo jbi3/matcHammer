@@ -19,6 +19,13 @@ html, body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;*/
 }
+body {
+	background-image: url('./media/bg_body_large_glitch_animated.gif');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #000;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'BebasNeueBold', sans-serif;
@@ -30,23 +37,6 @@ h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a:hover, .nav > li > a:focus { background-color: transparent; }
-
-/* VIDEO BACKGROUND */
-video {
-	margin: 0;
-  	padding: 0;
- 	position: fixed;
- 	top: 55%; 
- 	left: 50%;
-  	z-index: 1;
-  	min-width: 100%;
-  	min-height: 100%;
-  	width: auto;
-  	height: auto;
-  	-webkit-transform: translate(-50%,-50%);
-  	-ms-transform: translate(-50%,-50%);
-  	transform: translate(-50%,-50%); 
-}
 
 /* -------------------------------
 	WRAPPER + CONTAINER
@@ -214,7 +204,7 @@ footer {
 .modal {
 	width: 100%;
 	margin: auto;
-	background-image: url('./img/bg_body_large_glitch_modal.png');
+	background-image: url('./media/bg_body_large_glitch_animated_modal.gif');
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
