@@ -430,7 +430,7 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #146d43;
-    box-shadow: 0px 2px 3px #146d43;
+    
 
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     	animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -448,7 +448,7 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
         border-radius: 50%;
         border: 3px solid transparent;
         border-top-color: #41de90;
-        box-shadow: 0px 2px 3px #41de90;
+        
 
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         	animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -464,7 +464,7 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
         border-radius: 50%;
         border: 3px solid transparent;
         border-top-color: #146d43;
-        box-shadow: 0px 2px 3px #146d43;
+        
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         	animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -557,15 +557,26 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
     }
 
 .loader-text-auto {
+	max-width: 20%;
+	margin: auto;
+	padding: 1vh 0;
 	position: relative;
 	z-index: 1010;
 	text-align: center;
 	color: #41de90;
-	opacity: 1;
-	-webkit-animation: blink 1.5s infinite;
-	-moz-animation: blink 1.5s infinite;
-		animation: blink 1.5s infinite;
+	border: 4px double #146d43;
 }
+	.loader-text-auto p {
+		margin: 0;
+		padding: 0;
+		opacity: 1;
+		-webkit-animation: blink 1.5s;
+		-webkit-animation-iteration-count: 2;
+		-moz-animation: blink 1.5s;
+		-moz-animation-iteration-count: 2;
+			animation: blink 1.5s;
+			animation-iteration-count: 2;
+	}
 
 /*---------------------------*/
 /***** Bounce To Right  *****/

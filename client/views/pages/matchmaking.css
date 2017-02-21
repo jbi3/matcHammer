@@ -36,6 +36,20 @@
 	border-radius: 0;
 }
 
+.af-radio-group {
+	display: flex;
+	width: 100%;
+}
+
+.matchmakingFieldset .radio {
+	max-width: 49%;
+	margin: 2vh 3vw 0;
+}
+	.radio label
+	{
+		margin: 0;
+	}
+
 .matchmakingFieldset optgroup {
 	font-weight: normal;
 }
