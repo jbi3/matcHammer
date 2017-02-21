@@ -209,6 +209,10 @@ footer {
 	background-attachment: fixed;
 	background-color: #000;
 }
+.modal-sm {
+	width: 75%;
+	text-align: center;
+}
 .modal-content {
 	color: #40dd8f;
 	background-image: url('./img/bckg_container.png');
@@ -244,6 +248,7 @@ footer {
 .modal ul li a {
 	color: #fff;
 }
+
 button.at-social-btn i {
     float: none;
     width: 40px;
@@ -261,13 +266,20 @@ button.at-social-btn i {
 }
 
 .menuLinkSpan {
-	padding: 1vh;
-	margin: 1vh 0;
+	
 }
+	.menuLinkSpan > a {
+		padding: 0.75vh 2vw;
+		margin: 1vh 0;	
+	}
 	.menuLinkSpan > a:hover {
 		color: #42e393;
 		text-decoration: none;
 	}
+
+#mentionsLegales {
+	color: #fff;
+}
 
 /* -------------------------------
 	BUTTONS 
@@ -610,12 +622,11 @@ input[type="radio"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #033d24;
-  border: 1px solid #157045;
+  border: 4px double #157045;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
   -webkit-transition-property: transform;
   transition-property: transform;
   -webkit-transition-duration: 0.5s;
