@@ -350,6 +350,14 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
 	box-shadow: 0 0 5px #42e393 !important;
 }
 
+input[type="radio"] {
+	-moz-appearance: checkbox;
+	-webkit-appearance: checkbox;
+		appearance: checkbox;
+	background-color: #157045 !important;
+	border: 1px solid #303030 !important;
+}
+
 
 .at-nouislider .noUi-horizontal {
 	height: 5px;
