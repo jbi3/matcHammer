@@ -40,7 +40,6 @@ Template.matchmaking.helpers({
         optgroup: "CHAOS",
         options: [
           {label: "Chaos Space Marines", value: "Chaos Space Marines"},
-          {label: "Thousand Sons", value: "Thousand Sons"},
           {label: "Renegade Knights", value: "Renegade Knights"},
           {label: "Khorne Daemonkin", value: "Khorne Daemonkin"},
           {label: "Chaos Daemons", value: "Chaos Daemons"}
@@ -50,8 +49,8 @@ Template.matchmaking.helpers({
         optgroup: "XENOS",
         options: [
           {label: "Orks", value: "Orks"},
-          {label: "Eldar", value: "Eldars"},
-          {label: "Dark Eldar", value: "Dark Eldar"},
+          {label: "Eldars", value: "Eldars"},
+          {label: "Dark Eldars", value: "Dark Eldar"},
           {label: "Harlequins", value: "Harlequins"},
           {label: "Necrons", value: "Necrons"},
           {label: "Tau Empire", value: "Tau Empire"},

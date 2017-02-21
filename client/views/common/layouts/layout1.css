@@ -623,6 +623,7 @@ input[type="radio"] {
   right: 0;
   bottom: 0;
   border: 4px double #157045;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50% 50%;
