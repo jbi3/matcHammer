@@ -644,23 +644,29 @@ input:active, textarea:active, select:active, input:focus, textarea:focus, selec
 	}
 
 	.navbar {
-		min-height: 101px;
+		max-height: 100px;
 		margin: 0;
-		padding: 0 50px;
+		padding: 0 20px;
 		background-image: url('./img/bckg_nav_small.png');
 		background-repeat: no-repeat;
 		background-color: transparent;
 		border-radius: 0;
 		border: 0;
 	}
+		.navbar .dropdown-toggle, .navbar #menu {
+			padding-left: 0;
+			padding-bottom: 0;
+		}
 
 	.connectionBox {
-		display: none;
+		min-width: 100px;
+		padding: 10px;
+		margin-left: 5px;
+		font-size: 0.83em;
 	}
 
 	.logoBox {
-		position: relative;
-		left: 195px;
+		
 	}
 
 	footer {

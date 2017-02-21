@@ -81,6 +81,10 @@
 	position: relative;
 	bottom: -22px;
 	}
+	.matchmakingFieldset .separator {
+	max-width: 100%;
+	overflow: hidden;
+}
 }
 
 #instructionsDiv {
