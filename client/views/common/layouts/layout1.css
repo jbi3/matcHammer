@@ -339,6 +339,72 @@ button.at-social-btn i {
 	}
 
 /* -------------------------------
+	MATCHMAKING FIELDSET 
+------------------------------- */
+.matchmakingFieldset {
+	max-width: 790px;
+	margin: auto;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	background: url('./img/bckg_fieldset.png');
+	text-align: center;
+}
+.matchmakingFieldset:before {
+	content: url('./img/bckg_fieldset-before.png');
+	position: relative;
+	top: -15px;
+}
+.matchmakingFieldset:after {
+	content: url('./img/bckg_fieldset-after.png');
+	position: relative;
+	bottom: -22px;
+}
+
+.matchmakingFieldset label {
+	margin: 30px 0 15px;
+	display: block;
+	text-align: left;
+	font-family: "BaskervaldADFStd", serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform: initial;
+	letter-spacing: 0.5px;
+}
+
+.matchmakingFieldset input, .matchmakingFieldset select {
+	background: #033d24;
+	color: #4beec4;
+	border: 0.5px solid #157045;
+	border-radius: 0;
+}
+
+.af-radio-group {
+	display: flex;
+	width: 100%;
+}
+
+.matchmakingFieldset .radio {
+	max-width: 49%;
+	margin: 2vh 3vw 0;
+}
+	.radio label
+	{
+		margin: 0;
+	}
+
+.matchmakingFieldset optgroup {
+	font-weight: normal;
+}
+
+.matchmakingFieldset .form-group {
+	min-height: 80px;
+	margin: auto;
+}
+.matchmakingFieldset .separator {
+	margin-top: 15px;
+}
+
+/* -------------------------------
 	FORM
 ------------------------------- */
 label { 
@@ -648,7 +714,7 @@ input[type="radio"] {
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-/* SCREEN =<1024w */
+/* Small =<1024w */
 @media screen and (max-width: 1024px) {
 	.wrapper {
 		max-width: 768px;
@@ -688,15 +754,130 @@ input[type="radio"] {
 		font-size: 0.83em;
 	}
 
-	.logoBox {
-		
-	}
-
 	footer {
 		min-height: 70px;
 		margin: 0;
 		padding: 0 50px;
 		background-image: url('./img/bckg_footer_small.png');
 		background-repeat: no-repeat;
+	}
+	.matchmakingFieldset {
+		max-width: 710px;
+		margin: auto;
+		margin-top: 45px;
+		margin-bottom: 15px;
+		background: url('./img/bckg_fieldset_small.png');
+		text-align: center;
+	}
+	.matchmakingFieldset:before {
+		content: url('./img/bckg_fieldset-before_small.png');
+	position: relative;
+	top: -15px;
+	}
+	.matchmakingFieldset:after {
+		content: url('./img/bckg_fieldset-after_small.png');
+		position: relative;
+		bottom: -22px;
+	}
+	.matchmakingFieldset .separator {
+		max-width: 100%;
+		overflow: hidden;
+	}
+}
+
+/* XS =<768px */
+@media screen and (max-width: 768px) {
+	/* WRAPPER + CONTAINER */
+	.wrapper {
+		max-width: 768px;
+		margin: 0;
+		color: #42e393;
+	}
+	.container-fluid {
+		padding: 0 0 30px;
+		margin: 0 auto;
+		background-image: url('./img/bckg_container.png');
+		background-repeat: repeat-y;
+	}
+	/* NAV */
+	.connectionBox {
+		display: none;
+	}
+	.logoBox {
+		position: relative;
+		left: 0;
+	}
+	.navbar {
+		min-height: 100px;
+		margin: 0;
+		padding: 0 45px 0 0;
+		background-image: url('./img/bckg_nav_xs.png');
+		background-repeat: no-repeat;
+		background-color: transparent;
+		border-radius: 0;
+		border: 0;
+	}
+	.pull-right {
+		margin-top: 0;
+		position: relative;
+    	bottom: 38px;
+	}
+	/* MATCHMAKING FIELDSET */
+	.instructions {
+		margin: 20px 0 0;
+		padding: 20px 5px;
+		text-align: center;
+		font-size: 1.3em;
+		color: #fff;
+		background-image: url('./img/bckg_Instructions.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	.matchmakingFieldset {
+		overflow: hidden;
+		max-width: 100% !important;
+		margin: 20px 0 !important;
+		padding: 20px 0 !important;
+		background: none !important;
+		background-color: rgba(0, 0, 0, 0.6) !important;
+		border-top: 1px solid #125c39;
+		border-bottom: 1px solid #125c39;
+		text-align: center;
+	}
+	.matchmakingFieldset:before {
+		display: none;
+	}
+	.matchmakingFieldset:after {
+		display: none;
+	}
+	.matchmakingFieldset label {
+		margin: 20px 0 15px;
+		text-align: center !important;
+		font-family: "BaskervaldADFStd", serif;
+		font-size: 1.3em;
+	}
+	.btnCallToAction {
+		width: 351px;
+		height: 100px;
+		margin: auto;
+		margin-bottom: 5px;
+		font-size: 3em;
+		background: url('./img/bckg_btnCallToAction.png');
+		-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+	}
+	.btnCallToAction:hover {
+		background: url('./img/bckg_btnCallToAction_hover.png');
+	}
+	#firstSeparator {
+		display: none;
+	}
+	footer {
+		min-height: 70px;
+		margin: 0;
+		padding: 0 50px;
+		background-image: url('./img/bckg_footer_xs.png');
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }
