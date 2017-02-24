@@ -5,11 +5,11 @@ import './profile.html';
 /*import { users };*/
 
 
-Template.profile.helpers({
+/*Template.profile.helpers({
   users() {
     return users;
   }
-});
+});*/
 
 Template.profile.events({
 /*	

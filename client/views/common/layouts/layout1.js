@@ -87,10 +87,12 @@ Template.menuModal.events({
 ////////////////////////////////////////
 
 Template.layout1.helpers({
-  userBlaze: function() {
-    return Meteor.user().profile.userSurname;
+/*  
+  'userBlaz' : function() {
+    return Profile.userSurname;
     //return userSurname;
   }
+*/
 });
 
 //close dialogue onClick
