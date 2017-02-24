@@ -2,6 +2,14 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './profile.html';
+/*import { users };*/
+
+
+Template.profile.helpers({
+  users() {
+    return users;
+  }
+});
 
 Template.profile.events({
 /*	
@@ -14,5 +22,5 @@ Template.profile.events({
     e.preventDefault();
     
     Modal.show('locationModalTemplate');
-  },
+  }
 });

@@ -14,6 +14,9 @@
 		<nav class="navbar navbar-inverse" role="navigation">
       		<div class="navbar-header connectionBox">
         		<p><span class="connectionBoxNew">+++ Nouvelle connexion +++</span><br><i>{{currentUser.username}}</i></p>
+        		{{#if currentUser}}
+        			{{userBlaze}}
+    			{{/if}}
       		</div>
       		<div class="navbar-header logoBox">
         		<a class="navbar-brand" href="#" id="navbarMatchmakingLink">

@@ -81,6 +81,18 @@ Template.menuModal.events({
        Router.go('/profile');
      }
 });
+
+////////////////////////////////////////
+/////////////// helpers ////////////////
+////////////////////////////////////////
+
+Template.layout1.helpers({
+  userBlaze: function() {
+    return Meteor.user().profile.userSurname;
+    //return userSurname;
+  }
+});
+
 //close dialogue onClick
      // 'click .menuLinks': function(e, t){
      //  console.log("You clicked");

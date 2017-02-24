@@ -1,62 +1,26 @@
 <template name="profile">
+ 	<h1>mon Profil</h1>
+
+ 	<p class="instructions">Gère ton profil et tes informations.</p>
+	
+	<div class="profileBloc">
 
 <div id ="locationDiv">
           <button class="btn btn-secondary" id="locate">changer la localisation</button>
         </div> 
-{{#autoForm collection="UserProfiles" type="insert"}}
-    {{> afQuickField name="picture"}}
+{{currentUser.Profile.userSurname}}
+{{#autoForm collection="Profile" type="update"}}
+<!--     {{> afQuickField name="picture"}} -->
     {{> afQuickField name="userSurname"}}
     
     <button type="submit" class="btn btn-secondary">Sauvegarder</button>
 {{/autoForm}}
 
- 	<h1>mon Profil</h1>
- 	<p class="instructions">Gère ton profil et tes informations.</p>
-	<div class="profileBloc">
-		<div class="profileBlocImg">
-		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-
-	<!-- 	{{#if currentUser}}
-  <img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-{{/if}} -->
-		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-		<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-		<img scr="{{currentUser.services.facebook.picture}}">
-		</div>
-		<div class="profileBlocInfo">
-			{{#if currentUser}}
-  				<img scr="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-			{{/if}}
-		<!-- <img src="currentUser.profile.picture"> -->
-			{{currentUser.userName}}
-			<button class="btn btn-primary" id="modifierAvatar">Modifier l'avatar</button>
-		</div>
-		<!-- <fieldset>
-			<div class="form-group">
-				<label for="registerPseudo">Nom d'utilisateur:</label><br>
-				{{currentUser.username}}
-	      		<input class="pseudo-input" name="registerPseudo" id="registerPseudo" type="text" placeholder="user1325">
-			</div>
-			<div class="form-group">
-				<label for="registerEmail">Email:</label><br>
-				{{mail}}
-	      		<input class="email-input" name="registerEmail" id="registerEmail" type="text" placeholder="nouvel email">
-	      		
-			</div>
-			<div class="form-group">
-				<label for="registerPassword">Mot de passe:</label><br>
-	      		<input class="password-input" name="registerPassword" id="registerPassword" type="password" placeholder="nouveau mot de passe">
-			</div>
-			<div class="form-group">
-			{{mailingAddress}}
-				<label for="registerPlace">Adresse (ville):</label><br>
-	      		<input class="place-input" name="registerPlace" id="registerPlace" type="text" placeholder="user1325 city">
-			</div>
-			<button class="btn btn-primary" id="enregistrerModifications">Enregistrer</button>
-		</fieldset> -->
 	</div>
+	
 </template>
 
+<!-- modal template for location -->
 <template name="locationModalTemplate">
   <div class="modal fade" id="locationModal">
     <div class="modal-dialog modal-sm">
@@ -64,7 +28,7 @@
       <div class="modal-content">
         <div class="modal-body">
           <div id="locate">
-          {{#autoForm collection="UserProfiles" type="insert"}}
+          {{#autoForm collection="Profile" type="update"}}
             {{> afQuickField name="location"}}
             {{/autoForm}}
             <button type="submit" class="btn btn-secondary">Sauvegarder</button>
@@ -75,4 +39,21 @@
   </div> 
 </template>
 
-<!-- placeholder="user1325" -->
+<!-- modal template profile picture -->
+<template name="profilePicModalTemplate">
+  <div class="modal fade" id="locationModal">
+    <div class="modal-dialog modal-sm">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="locate">
+          {{#autoForm collection="Profile" type="update"}}
+            {{> afQuickField name="location"}}
+            {{/autoForm}}
+            <button type="submit" class="btn btn-secondary">Sauvegarder</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div> 
+</template>

@@ -110,6 +110,31 @@ Accounts.onCreateUser(function(options, user) {
 
 // test accounts package
 
+///////////////////////////////
+/////Reset profile fields//////
+///////////////////////////////
+
+if(Meteor.isServer) {
+    
+    Accounts.onCreateUser(function (options, user) {
+        user._id = user._id || new Mongo.ObjectID();
+
+        // so here you can hook profile field passed from client
+        let profileData = options.profile || {};
+        profileData.userId = user._id;
+
+        Profile.insert(profileData);
+
+        user.profile = {};
+        return user;
+    });
+
+    Profile._ensureIndex({userId: 1});
+}
+
+///////////////////////////////
+///// on submit fucntion //////
+///////////////////////////////
   mySubmitFunc = function(error, state){
   if (!error) {
     if (state === 'signIn') {
@@ -132,7 +157,9 @@ Accounts.onCreateUser(function(options, user) {
     }
   }
 };
-
+///////////////////////////////
+/////   configuration     /////
+///////////////////////////////
 AccountsTemplates.configure({
     // Behavior
     confirmPassword: true,
