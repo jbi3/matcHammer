@@ -8,8 +8,11 @@
 <div id ="locationDiv">
           <button class="btn btn-secondary" id="locate">changer la localisation</button>
         </div> 
-{{currentUser.Profile.userSurname}}
-{{#autoForm collection="Profile" type="update"}}
+        <div id ="locationDiv">
+          <button class="btn btn-secondary" id="changePicture">changer l'image du profil</button>
+        </div> 
+{{UserProfile.userSurname}}
+{{#autoForm collection="UserProfile" type="update"}}
 <!--     {{> afQuickField name="picture"}} -->
     {{> afQuickField name="userSurname"}}
     
@@ -28,7 +31,7 @@
       <div class="modal-content">
         <div class="modal-body">
           <div id="locate">
-          {{#autoForm collection="Profile" type="update"}}
+          {{#autoForm collection="UserProfile" type="update"}}
             {{> afQuickField name="location"}}
             {{/autoForm}}
             <button type="submit" class="btn btn-secondary">Sauvegarder</button>
@@ -47,8 +50,8 @@
       <div class="modal-content">
         <div class="modal-body">
           <div id="locate">
-          {{#autoForm collection="Profile" type="update"}}
-            {{> afQuickField name="location"}}
+          {{#autoForm collection="UserProfile" type="update"}}
+            {{> afQuickField name="profilePicture"}}
             {{/autoForm}}
             <button type="submit" class="btn btn-secondary">Sauvegarder</button>
           </div>

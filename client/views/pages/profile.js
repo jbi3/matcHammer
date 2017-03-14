@@ -22,5 +22,10 @@ Template.profile.events({
     e.preventDefault();
     
     Modal.show('locationModalTemplate');
+  },
+  'click #changePicture': function(e) {
+    e.preventDefault();
+    
+    Modal.show('profilePicModalTemplate');
   }
 });

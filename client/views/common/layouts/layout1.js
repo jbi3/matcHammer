@@ -87,12 +87,11 @@ Template.menuModal.events({
 ////////////////////////////////////////
 
 Template.layout1.helpers({
-/*  
+  
   'userBlaz' : function() {
-    return Profile.userSurname;
-    //return userSurname;
+    return UserProfile.find({},{fields: {userSurname}});
   }
-*/
+
 });
 
 //close dialogue onClick
