@@ -1,5 +1,5 @@
 {
-  "name": "tinderHammer",
+  "name": "tinderhammer",
   "private": true,
   "scripts": {
     "start": "meteor run"
